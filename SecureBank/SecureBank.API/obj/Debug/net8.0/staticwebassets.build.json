@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "0rwvSNVwKze4oS1ossWaI/N4TXoJwHmvoX5roKCGHXU=",
+  "Source": "SecureBank.API",
+  "BasePath": "_content/SecureBank.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
