@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecureBank.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46b0863f93e4e9ef8ed8de09dd79f8f29a36d97a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbcc8f6e2b406235b2dea71e1b8039e2fe36eacc")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecureBank.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecureBank.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
