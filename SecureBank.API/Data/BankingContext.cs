@@ -18,17 +18,25 @@ namespace SecureBank.API.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CreditCard>()
-                .HasOne(c => c.Account);
+            modelBuilder.Entity<Account>()
+                .HasMany(a => a.BillPayments)
+                .WithOne(b => b.Account)
+                .HasForeignKey(b => b.AccountId);
 
-            modelBuilder.Entity<BillPayment>()
-                .HasOne(c => c.Account);
+            modelBuilder.Entity<Account>()
+                .HasMany(a => a.CreditCards)
+                .WithOne(c => c.Account)
+                .HasForeignKey(c => c.AccountId);
 
-            modelBuilder.Entity<Loan>()
-                .HasOne(c => c.Account);
+            modelBuilder.Entity<Account>()
+                .HasMany(a => a.Loans)
+                .WithOne(l => l.Account)
+                .HasForeignKey(l => l.AccountId);
 
-            modelBuilder.Entity<Investment>()
-                .HasOne(c => c.Account);
+            modelBuilder.Entity<Account>()
+                .HasMany(a => a.Investments)
+                .WithOne(i => i.Account)
+                .HasForeignKey(i => i.AccountId);
         }
     }
 }

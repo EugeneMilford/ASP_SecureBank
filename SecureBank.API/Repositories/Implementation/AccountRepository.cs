@@ -16,12 +16,22 @@ namespace SecureBank.API.Repositories.Implementation
 
         public async Task<List<Account>> GetAccountsAsync()
         {
-            return await _context.accounts.ToListAsync();
+            return await _context.accounts
+                .Include(a => a.BillPayments)
+                .Include(a => a.Loans)
+                .Include(a => a.CreditCards)
+                .Include(a => a.Investments)
+                .ToListAsync();
         }
 
         public async Task<Account?> GetByIdAsync(int id)
         {
-            return await _context.accounts.FirstOrDefaultAsync(x => x.AccountId == id);
+            return await _context.accounts
+                .Include(a => a.BillPayments)
+                .Include(a => a.Loans)
+                .Include(a => a.CreditCards)
+                .Include(a => a.Investments)
+                .FirstOrDefaultAsync(x => x.AccountId == id);
         }
 
         public async Task<Account> CreateAsync(Account account)
@@ -35,12 +45,10 @@ namespace SecureBank.API.Repositories.Implementation
         {
             var existing = await _context.Set<Account>().FindAsync(id);
             if (existing == null) return null;
-
             existing.AccountNumber = account.AccountNumber;
             existing.Balance = account.Balance;
             existing.AccountType = account.AccountType;
             existing.CreatedDate = account.CreatedDate;
-
             await _context.SaveChangesAsync();
             return existing;
         }
@@ -54,5 +62,4 @@ namespace SecureBank.API.Repositories.Implementation
             return account;
         }
     }
-
 }

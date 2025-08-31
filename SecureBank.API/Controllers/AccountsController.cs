@@ -28,7 +28,16 @@ namespace SecureBank.API.Controllers
                 AccountNumber = a.AccountNumber,
                 Balance = a.Balance,
                 AccountType = a.AccountType,
-                CreatedDate = a.CreatedDate
+                CreatedDate = a.CreatedDate,
+                Bills = a.BillPayments?.Select(b => new BillPaymentDto
+                {
+                    BillId = b.BillId,
+                    AccountId = b.AccountId,
+                    Amount = b.Amount,
+                    PaymentDate = b.PaymentDate,
+                    Biller = b.Biller,
+                    ReferenceNumber = b.ReferenceNumber
+                }).ToList() ?? new List<BillPaymentDto>()
             }).ToList();
 
             return Ok(dtos);

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35209.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureBank.API", "SecureBank.API\SecureBank.API.csproj", "{DFBB0416-AF5D-40DE-B108-2BAB283627D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureBank.UI", "SecureBank.UI\SecureBank.UI.csproj", "{FB87B83C-980A-4FA9-BE55-73096A6E78CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DFBB0416-AF5D-40DE-B108-2BAB283627D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFBB0416-AF5D-40DE-B108-2BAB283627D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFBB0416-AF5D-40DE-B108-2BAB283627D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB87B83C-980A-4FA9-BE55-73096A6E78CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB87B83C-980A-4FA9-BE55-73096A6E78CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB87B83C-980A-4FA9-BE55-73096A6E78CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB87B83C-980A-4FA9-BE55-73096A6E78CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

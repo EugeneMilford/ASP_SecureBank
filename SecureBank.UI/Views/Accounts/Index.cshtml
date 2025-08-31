@@ -1,0 +1,119 @@
+﻿@model IEnumerable<SecureBank.UI.Models.DTO.AccountDetailsDto>
+
+<h3 class="mt-3">Accounts</h3>
+<div class="d-flex justify-content-end">
+    <a class="btn btn-secondary" asp-controller="Accounts" asp-action="Add">Add Account</a>
+</div>
+
+@foreach (var account in Model)
+{
+    <div class="card mb-4">
+        <div class="card-header">
+            <strong>Account #@account.AccountNumber</strong> - @account.AccountType <br />
+            Balance: <strong>@account.Balance</strong>, Created: @account.CreatedDate
+        </div>
+        <div class="card-body">
+            <h5>Loans</h5>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Loan Id</th>
+                        <th>Amount</th>
+                        <th>Interest Rate</th>
+                        <th>Remaining Amount</th>
+                        <th>Paid Off</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var loan in account.Loans)
+                {
+                    <tr>
+                        <td>@loan.LoanId</td>
+                        <td>@loan.LoanAmount</td>
+                        <td>@loan.InterestRate</td>
+                        <td>@loan.RemainingAmount</td>
+                        <td>@loan.IsLoanPaidOff</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+
+            <h5>Credit Cards</h5>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Card #</th>
+                        <th>Type</th>
+                        <th>Limit</th>
+                        <th>Balance</th>
+                        <th>Expiry</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var card in account.CreditCards)
+                {
+                    <tr>
+                        <td>@card.CardNumber</td>
+                        <td>@card.CardType</td>
+                        <td>@card.CreditLimit</td>
+                        <td>@card.CurrentBalance</td>
+                        <td>@card.ExpiryDate.ToShortDateString()</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+
+            <h5>Bills</h5>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Bill Id</th>
+                        <th>Biller</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Reference</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var bill in account.Bills)
+                {
+                    <tr>
+                        <td>@bill.BillId</td>
+                        <td>@bill.Biller</td>
+                        <td>@bill.Amount</td>
+                        <td>@bill.PaymentDate.ToShortDateString()</td>
+                        <td>@bill.ReferenceNumber</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+
+            <h5>Investments</h5>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Investment Id</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Current Value</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var inv in account.Investments)
+                {
+                    <tr>
+                        <td>@inv.InvestmentId</td>
+                        <td>@inv.InvestmentType</td>
+                        <td>@inv.InvestmentAmount</td>
+                        <td>@inv.CurrentValue</td>
+                        <td>@inv.InvestmentDate.ToShortDateString()</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+
