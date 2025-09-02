@@ -1,119 +1,259 @@
 ﻿@model IEnumerable<SecureBank.UI.Models.DTO.AccountDetailsDto>
 
-<h3 class="mt-3">Accounts</h3>
-<div class="d-flex justify-content-end">
-    <a class="btn btn-secondary" asp-controller="Accounts" asp-action="Add">Add Account</a>
-</div>
+<style>
+    :root {
+        --primary-color: #2c5530;
+        --secondary-color: #f8f9fa;
+        --accent-color: #28a745;
+        --border-radius: 6px;
+        --card-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
 
-@foreach (var account in Model)
-{
-    <div class="card mb-4">
-        <div class="card-header">
-            <strong>Account #@account.AccountNumber</strong> - @account.AccountType <br />
-            Balance: <strong>@account.Balance</strong>, Created: @account.CreatedDate
-        </div>
-        <div class="card-body">
-            <h5>Loans</h5>
-            <table class="table table-sm">
-                <thead>
-                    <tr>
-                        <th>Loan Id</th>
-                        <th>Amount</th>
-                        <th>Interest Rate</th>
-                        <th>Remaining Amount</th>
-                        <th>Paid Off</th>
-                    </tr>
-                </thead>
-                <tbody>
-                @foreach (var loan in account.Loans)
-                {
-                    <tr>
-                        <td>@loan.LoanId</td>
-                        <td>@loan.LoanAmount</td>
-                        <td>@loan.InterestRate</td>
-                        <td>@loan.RemainingAmount</td>
-                        <td>@loan.IsLoanPaidOff</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
+    body {
+        background: #f7f8fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+    }
 
-            <h5>Credit Cards</h5>
-            <table class="table table-sm">
-                <thead>
-                    <tr>
-                        <th>Card #</th>
-                        <th>Type</th>
-                        <th>Limit</th>
-                        <th>Balance</th>
-                        <th>Expiry</th>
-                    </tr>
-                </thead>
-                <tbody>
-                @foreach (var card in account.CreditCards)
-                {
-                    <tr>
-                        <td>@card.CardNumber</td>
-                        <td>@card.CardType</td>
-                        <td>@card.CreditLimit</td>
-                        <td>@card.CurrentBalance</td>
-                        <td>@card.ExpiryDate.ToShortDateString()</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
+    .page-header {
+        background: var(--primary-color);
+        color: #fff;
+        padding: 1rem 0;
+        margin-bottom: 1.2rem;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+    .page-title {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 0;
+    }
+    .add-account-btn {
+        background: var(--accent-color);
+        border: none;
+        padding: 7px 16px;
+        border-radius: var(--border-radius);
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.2s;
+    }
+    .add-account-btn:hover {
+        background: #218838;
+    }
 
-            <h5>Bills</h5>
-            <table class="table table-sm">
-                <thead>
-                    <tr>
-                        <th>Bill Id</th>
-                        <th>Biller</th>
-                        <th>Amount</th>
-                        <th>Date</th>
-                        <th>Reference</th>
-                    </tr>
-                </thead>
-                <tbody>
-                @foreach (var bill in account.Bills)
-                {
-                    <tr>
-                        <td>@bill.BillId</td>
-                        <td>@bill.Biller</td>
-                        <td>@bill.Amount</td>
-                        <td>@bill.PaymentDate.ToShortDateString()</td>
-                        <td>@bill.ReferenceNumber</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
+    .account-card {
+        border: 1px solid #eee;
+        border-radius: var(--border-radius);
+        box-shadow: var(--card-shadow);
+        margin-bottom: 1.2rem;
+        overflow: hidden;
+        transition: box-shadow 0.2s;
+        background: #fff;
+    }
+    .account-card:hover {
+        box-shadow: 0 4px 12px rgba(44,85,48,0.13);
+    }
+    .account-header {
+        background: #f6f9f6;
+        border-bottom: 1px solid #e3e5ea;
+        padding: 0.8rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .account-number {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+    .account-type {
+        background: var(--primary-color);
+        color: #fff;
+        border-radius: 14px;
+        font-size: 0.8rem;
+        padding: 2px 10px;
+        font-weight: 500;
+    }
+    .balance-info {
+        font-size: 0.97rem;
+        display: flex;
+        gap: 1.2rem;
+        align-items: center;
+        margin-top: 0.2rem;
+    }
+    .balance-amount {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--accent-color);
+    }
+    .created-date {
+        color: #888;
+        font-size: 0.85rem;
+        margin-left: 0.5rem;
+    }
+    .section-header {
+        font-size: 1rem;
+        font-weight: 600;
+        background: none;
+        color: var(--primary-color);
+        margin: 1rem 0 0.3rem 0;
+        padding: 0;
+    }
+    .custom-table table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.96rem;
+        margin-bottom: 0.7rem;
+    }
+    .custom-table th,
+    .custom-table td {
+        padding: 0.45rem 0.35rem;
+        text-align: left;
+        border-bottom: 1px solid #f0f2f4;
+        vertical-align: middle;
+        font-size: 0.95rem;
+    }
+    .custom-table th {
+        background: #f5f7fa;
+        color: #38563b;
+        font-weight: 600;
+        font-size: 0.93rem;
+        border: none;
+    }
+    .custom-table tr:last-child td {
+        border-bottom: none;
+    }
+    .amount {
+        font-weight: 600;
+        color: var(--accent-color);
+    }   
+    }
+</style>
 
-            <h5>Investments</h5>
-            <table class="table table-sm">
-                <thead>
-                    <tr>
-                        <th>Investment Id</th>
-                        <th>Type</th>
-                        <th>Amount</th>
-                        <th>Current Value</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                @foreach (var inv in account.Investments)
-                {
-                    <tr>
-                        <td>@inv.InvestmentId</td>
-                        <td>@inv.InvestmentType</td>
-                        <td>@inv.InvestmentAmount</td>
-                        <td>@inv.CurrentValue</td>
-                        <td>@inv.InvestmentDate.ToShortDateString()</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
+<div class="page-header">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center" style="gap:1rem;">
+            <h3 class="page-title">Accounts</h3>
+            <a class="add-account-btn btn btn-secondary" asp-controller="Accounts" asp-action="Add">Add Account</a>
         </div>
     </div>
-}
+</div>
+
+<div class="container">
+    @foreach (var account in Model)
+    {
+        <div class="account-card card">
+            <div class="account-header card-header">
+                <div>
+                    <span class="account-number">Account #@account.AccountNumber</span>
+                    <span class="account-type">@account.AccountType</span>
+                </div>
+                <div class="balance-info">
+                    <span>Balance: <span class="balance-amount">@account.Balance</span></span>
+                    <span class="created-date">Created: @account.CreatedDate</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div>
+                    <div class="section-header">Loans</div>
+                    <div class="custom-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Loan Id</th><th>Amount</th><th>Interest Rate</th><th>Remaining</th><th>Paid Off</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var loan in account.Loans)
+                            {
+                                <tr>
+                                    <td>@loan.LoanId</td>
+                                    <td class="amount">@loan.LoanAmount</td>
+                                    <td>@loan.InterestRate</td>
+                                    <td class="amount">@loan.RemainingAmount</td>
+                                    <td>@loan.IsLoanPaidOff</td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <div class="section-header">Credit Cards</div>
+                    <div class="custom-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Card #</th><th>Type</th><th>Limit</th><th>Balance</th><th>Expiry</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var card in account.CreditCards)
+                            {
+                                <tr>
+                                    <td>@card.CardNumber</td>
+                                    <td>@card.CardType</td>
+                                    <td class="amount">@card.CreditLimit</td>
+                                    <td class="amount">@card.CurrentBalance</td>
+                                    <td>@card.ExpiryDate.ToShortDateString()</td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <div class="section-header">Bills</div>
+                    <div class="custom-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Bill Id</th><th>Biller</th><th>Amount</th><th>Date</th><th>Reference</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var bill in account.Bills)
+                            {
+                                <tr>
+                                    <td>@bill.BillId</td>
+                                    <td>@bill.Biller</td>
+                                    <td class="amount">@bill.Amount</td>
+                                    <td>@bill.PaymentDate.ToShortDateString()</td>
+                                    <td>@bill.ReferenceNumber</td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <div class="section-header">Investments</div>
+                    <div class="custom-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Investment Id</th><th>Type</th><th>Amount</th><th>Current Value</th><th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var inv in account.Investments)
+                            {
+                                <tr>
+                                    <td>@inv.InvestmentId</td>
+                                    <td>@inv.InvestmentType</td>
+                                    <td class="amount">@inv.InvestmentAmount</td>
+                                    <td class="amount">@inv.CurrentValue</td>
+                                    <td>@inv.InvestmentDate.ToShortDateString()</td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
 
 

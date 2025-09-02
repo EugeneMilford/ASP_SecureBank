@@ -22,7 +22,7 @@ namespace SecureBank.API.Repositories.Implementation
         public async Task<CreditCard?> GetByIdAsync(int id)
         {
             return await _context.creditCards
-                .Include(c => c.Account) // Optional: eager load account
+                .Include(c => c.Account) 
                 .FirstOrDefaultAsync(c => c.CreditId == id);
         }
 

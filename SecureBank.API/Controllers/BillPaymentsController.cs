@@ -28,6 +28,7 @@ namespace SecureBank.API.Controllers
             {
                 BillId = bp.BillId,
                 AccountId = bp.AccountId,
+                AccountNumber = bp.Account.AccountNumber,
                 Amount = bp.Amount,
                 PaymentDate = bp.PaymentDate,
                 Biller = bp.Biller,
@@ -49,6 +50,7 @@ namespace SecureBank.API.Controllers
             {
                 BillId = billPayment.BillId,
                 AccountId = billPayment.AccountId,
+                AccountNumber = billPayment.Account?.AccountNumber,
                 Amount = billPayment.Amount,
                 PaymentDate = billPayment.PaymentDate,
                 Biller = billPayment.Biller,

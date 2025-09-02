@@ -29,15 +29,30 @@ namespace SecureBank.API.Controllers
                 Balance = a.Balance,
                 AccountType = a.AccountType,
                 CreatedDate = a.CreatedDate,
+                // Bills
                 Bills = a.BillPayments?.Select(b => new BillPaymentDto
                 {
                     BillId = b.BillId,
                     AccountId = b.AccountId,
+                    AccountNumber = b.Account.AccountNumber, 
                     Amount = b.Amount,
                     PaymentDate = b.PaymentDate,
                     Biller = b.Biller,
                     ReferenceNumber = b.ReferenceNumber
-                }).ToList() ?? new List<BillPaymentDto>()
+                }).ToList() ?? new List<BillPaymentDto>(),
+
+                // Loans
+                Loans = a.Loans?.Select(l => new LoanDto
+                {
+                    LoanId = l.LoanId,
+                    AccountId = l.AccountId,
+                    LoanAmount = l.LoanAmount,
+                    InterestRate = l.InterestRate,
+                    LoanStartDate = l.LoanStartDate,
+                    LoanEndDate = l.LoanEndDate,
+                    RemainingAmount = l.RemainingAmount,
+                    IsLoanPaidOff = l.IsLoanPaidOff
+                }).ToList() ?? new List<LoanDto>()
             }).ToList();
 
             return Ok(dtos);

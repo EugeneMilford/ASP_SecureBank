@@ -16,7 +16,9 @@ namespace SecureBank.API.Repositories.Implementation
 
         public async Task<List<BillPayment>> GetBillPaymentsAsync()
         {
-            return await _context.billPayments.ToListAsync();
+            return await _context.billPayments
+                .Include(bp => bp.Account) 
+                .ToListAsync();
         }
 
         public async Task<BillPayment?> GetByIdAsync(int id)
