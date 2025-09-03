@@ -16,7 +16,9 @@ namespace SecureBank.API.Repositories.Implementation
 
         public async Task<List<CreditCard>> GetCreditCardsAsync()
         {
-            return await _context.creditCards.ToListAsync();
+            return await _context.creditCards
+                .Include(bp => bp.Account)
+                .ToListAsync();
         }
 
         public async Task<CreditCard?> GetByIdAsync(int id)

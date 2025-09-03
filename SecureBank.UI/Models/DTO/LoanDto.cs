@@ -3,7 +3,7 @@
     public class LoanDto
     {
         public int LoanId { get; set; }
-        public int AccountId { get; set; }
+        public string AccountNumber { get; set; }
         public decimal LoanAmount { get; set; }
         public decimal InterestRate { get; set; }
         public decimal RemainingAmount { get; set; }

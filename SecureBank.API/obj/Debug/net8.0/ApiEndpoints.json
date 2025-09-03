@@ -311,6 +311,22 @@
   },
   {
     "ContainingType": "SecureBank.API.Controllers.CreditCardsController",
+    "Method": "DeleteCreditCard",
+    "RelativePath": "api/CreditCards/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SecureBank.API.Controllers.CreditCardsController",
     "Method": "ChargeCreditCard",
     "RelativePath": "api/CreditCards/{id}/charge",
     "HttpMethod": "POST",

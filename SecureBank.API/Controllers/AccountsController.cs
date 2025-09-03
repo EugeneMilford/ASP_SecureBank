@@ -29,6 +29,7 @@ namespace SecureBank.API.Controllers
                 Balance = a.Balance,
                 AccountType = a.AccountType,
                 CreatedDate = a.CreatedDate,
+
                 // Bills
                 Bills = a.BillPayments?.Select(b => new BillPaymentDto
                 {
@@ -52,7 +53,33 @@ namespace SecureBank.API.Controllers
                     LoanEndDate = l.LoanEndDate,
                     RemainingAmount = l.RemainingAmount,
                     IsLoanPaidOff = l.IsLoanPaidOff
-                }).ToList() ?? new List<LoanDto>()
+                }).ToList() ?? new List<LoanDto>(),
+
+                // Credit Cards
+                CreditCards = a.CreditCards?.Select(c => new CreditCardDto
+                {
+                    CreditId = c.CreditId,
+                    CardNumber = c.CardNumber,
+                    CreditLimit = c.CreditLimit,
+                    CurrentBalance = c.CurrentBalance,
+                    AccountId = c.AccountId,
+                    AccountNumber = c.Account.AccountNumber,
+                    ExpiryDate = c.ExpiryDate,
+                    CardType = c.CardType
+                    }).ToList() ?? new List<CreditCardDto>(),
+
+                // Investments
+                Investments = a.Investments?.Select(i => new InvestmentDto
+                {
+                    InvestmentId = i.InvestmentId,
+                    AccountId = i.AccountId,
+                    AccountNumber = i.Account.AccountNumber,
+                    InvestmentAmount = i.InvestmentAmount,
+                    InvestmentType = i.InvestmentType,
+                    CurrentValue = i.CurrentValue,
+                    InvestmentDate = i.InvestmentDate,
+                    Returns = i.CurrentValue - i.InvestmentAmount
+                }).ToList() ?? new List<InvestmentDto>()
             }).ToList();
 
             return Ok(dtos);

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SecureBank.API.Models.Domain;
 using SecureBank.API.Models.DTO;
+using SecureBank.API.Repositories.Implementation;
 using SecureBank.API.Repositories.Interface;
 
 namespace SecureBank.API.Controllers
@@ -31,6 +32,7 @@ namespace SecureBank.API.Controllers
                 CreditLimit = card.CreditLimit,
                 CurrentBalance = card.CurrentBalance,
                 AccountId = card.AccountId,
+                AccountNumber = card.Account.AccountNumber,
                 ExpiryDate = card.ExpiryDate,
                 CardType = card.CardType
             }).ToList();
@@ -155,6 +157,16 @@ namespace SecureBank.API.Controllers
             };
 
             return Ok(dto);
+        }
+
+        // DELETE: api/BillPayments/{id}
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteCreditCard(int id)
+        {
+            var deleted = await _creditCardRepository.DeleteAsync(id);
+            if (deleted == null)
+                return NotFound();
+            return NoContent();
         }
     }
 }

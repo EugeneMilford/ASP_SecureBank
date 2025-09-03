@@ -1,0 +1,181 @@
+﻿@model IEnumerable<SecureBank.UI.Models.DTO.LoanDto>
+
+<style>
+    :root {
+        --purple1: #9e1afd;
+        --purple2: #b465e7;
+        --purple3: #e0b3fa;
+        --purple4: #f6f2fc;
+        --purple5: #f8f6fb;
+        --text-dark: #25134a;
+        --border-radius: 8px;
+        --card-shadow: 0 2px 8px rgba(158, 26, 253, 0.09);
+    }
+    body {
+        background: var(--purple5);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+    }
+    .page-header {
+        background: linear-gradient(90deg, var(--purple2) 50%, var(--purple1) 100%);
+        color: #fff;
+        padding: 1.1rem 0;
+        margin-bottom: 1.2rem;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        box-shadow: 0 2px 8px rgba(158,26,253,0.11);
+    }
+    .page-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+    .add-loan-btn {
+        background: var(--purple1);
+        border: none;
+        padding: 7px 18px;
+        border-radius: var(--border-radius);
+        font-size: 1.04rem;
+        font-weight: 500;
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.2s;
+        box-shadow: 0 1px 6px rgba(158,26,253,0.09);
+    }
+    .add-loan-btn:hover {
+        background: #6f1cd6;
+        color: #fff;
+    }
+    .loan-card {
+        border: 1px solid #e3e8f0;
+        border-radius: var(--border-radius);
+        box-shadow: var(--card-shadow);
+        margin-bottom: 1.2rem;
+        background: #fff;
+        transition: box-shadow 0.16s;
+        overflow: hidden;
+    }
+    .loan-card:hover {
+        box-shadow: 0 4px 14px rgba(158,26,253,0.16);
+    }
+    .custom-table table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.98rem;
+        margin-bottom: 0.2rem;
+    }
+    .custom-table th,
+    .custom-table td {
+        padding: 0.47rem 0.37rem;
+        text-align: left;
+        border-bottom: 1px solid #e6eef6;
+        vertical-align: middle;
+        font-size: 0.97rem;
+    }
+    .custom-table th {
+        background: var(--purple3);
+        color: var(--purple1);
+        font-weight: 600;
+        font-size: 0.95rem;
+        border: none;
+        letter-spacing: 0.08em;
+    }
+    .custom-table tr:last-child td {
+        border-bottom: none;
+    }
+    .amount {
+        font-weight: 600;
+        color: var(--purple1);
+    }
+    .status-badge {
+        font-size: 0.97em;
+        padding: 3px 13px;
+        border-radius: 14px;
+        font-weight: 600;
+        background: var(--purple4);
+        color: var(--purple1);
+        border: 1px solid var(--purple3);
+        display: inline-block;
+    }
+    .status-badge.paid {
+        background: #e3f8e7;
+        color: #2dbf4f;
+        border: 1px solid #c0eac7;
+    }
+    .status-badge.active {
+        background: #f6e6ff;
+        color: var(--purple1);
+        border: 1px solid var(--purple3);
+    }
+    .no-loans {
+        padding: 2rem;
+        text-align: center;
+        color: var(--purple1);
+        background: var(--purple3);
+        border-radius: var(--border-radius);
+        margin-top: 2rem;
+        box-shadow: 0 1px 8px rgba(158,26,253,0.07);
+    }
+</style>
+
+<div class="page-header">
+    <div class="container d-flex justify-content-between align-items-center" style="gap:1rem;">
+        <h3 class="page-title"><i class="fas fa-hand-holding-usd me-2"></i>Loans</h3>
+        <a class="add-loan-btn btn btn-secondary" asp-controller="Loans" asp-action="Add">
+            <i class="fas fa-plus"></i> Add Loan
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    @if (Model != null && Model.Any())
+    {
+        <div>
+            <div class="custom-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Loan Id</th>
+                            <th>Account Number</th>
+                            <th>Loan Amount</th>
+                            <th>Interest Rate</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Remaining</th>
+                            <th>Monthly Payment</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var loan in Model)
+                        {
+                            <tr class="loan-card">
+                                <td>@loan.LoanId</td>
+                                <td>@loan.AccountNumber</td>
+                                <td class="amount">$@loan.LoanAmount</td>
+                                <td>@loan.InterestRate %</td>
+                                <td>@loan.LoanStartDate.ToString("MMM dd, yyyy")</td>
+                                <td>@loan.LoanEndDate.ToString("MMM dd, yyyy")</td>
+                                <td class="amount">$@loan.RemainingAmount</td>
+                                <td>$@loan.MonthlyRepayment</td>
+                                <td>
+                                    <span class="status-badge @(loan.IsLoanPaidOff ? "paid" : "active")">
+                                        @(loan.IsLoanPaidOff ? "Paid Off" : "Active")
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="no-loans">
+            <i class="fas fa-hand-holding-usd fa-2x mb-2"></i>
+            <h4>No loans found.</h4>
+            <p>All your loans will appear here.</p>
+        </div>
+    }
+</div>

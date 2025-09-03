@@ -16,7 +16,9 @@ namespace SecureBank.API.Repositories.Implementation
 
         public async Task<List<Loan>> GetLoansAsync()
         {
-            return await _context.loans.ToListAsync();
+            return await _context.loans
+                .Include(bp => bp.Account)
+                .ToListAsync();
         }
 
         public async Task<Loan?> GetByIdAsync(int id)

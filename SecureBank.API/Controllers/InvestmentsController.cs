@@ -28,6 +28,7 @@ namespace SecureBank.API.Controllers
             {
                 InvestmentId = inv.InvestmentId,
                 AccountId = inv.AccountId,
+                AccountNumber = inv.Account.AccountNumber,
                 InvestmentAmount = inv.InvestmentAmount,
                 InvestmentType = inv.InvestmentType,
                 CurrentValue = inv.CurrentValue,

@@ -1,0 +1,199 @@
+﻿@model IEnumerable<SecureBank.UI.Models.DTO.InvestmentDto>
+
+<style>
+    :root {
+        --red1: #d9042b;
+        --red2: #f24a5d;
+        --red3: #ffc6d0;
+        --red4: #fff2f5;
+        --red5: #fff7f8;
+        --text-dark: #2c141b;
+        --border-radius: 8px;
+        --card-shadow: 0 2px 8px rgba(217,4,43,0.11);
+    }
+
+    body {
+        background: var(--red5);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+    }
+
+    .page-header {
+        background: linear-gradient(90deg, var(--red2) 60%, var(--red1) 100%);
+        color: #fff;
+        padding: 1.1rem 0;
+        margin-bottom: 1.2rem;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        box-shadow: 0 2px 8px rgba(217,4,43,0.13);
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+
+    .add-investment-btn {
+        background: var(--red1);
+        border: none;
+        padding: 7px 18px;
+        border-radius: var(--border-radius);
+        font-size: 1.04rem;
+        font-weight: 500;
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.2s;
+        box-shadow: 0 1px 6px rgba(217,4,43,0.09);
+    }
+
+        .add-investment-btn:hover {
+            background: #a60320;
+            color: #fff;
+        }
+
+    .invest-card {
+        border: 1px solid #ffc6d0;
+        border-radius: var(--border-radius);
+        box-shadow: var(--card-shadow);
+        margin-bottom: 1.2rem;
+        background: #fff;
+        transition: box-shadow 0.16s;
+        overflow: hidden;
+    }
+
+        .invest-card:hover {
+            box-shadow: 0 4px 14px rgba(217,4,43,0.18);
+        }
+
+    .custom-table table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.98rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .custom-table th,
+    .custom-table td {
+        padding: 0.47rem 0.37rem;
+        text-align: left;
+        border-bottom: 1px solid #ffc6d0;
+        vertical-align: middle;
+        font-size: 0.97rem;
+    }
+
+    .custom-table th {
+        background: var(--red3);
+        color: var(--red1);
+        font-weight: 600;
+        font-size: 0.95rem;
+        border: none;
+        letter-spacing: 0.08em;
+    }
+
+    .custom-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .amount {
+        font-weight: 600;
+        color: var(--red1);
+    }
+
+    .type-badge {
+        font-size: 0.97em;
+        padding: 3px 13px;
+        border-radius: 14px;
+        font-weight: 600;
+        background: var(--red4);
+        color: var(--red1);
+        border: 1px solid var(--red2);
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    .returns-badge {
+        font-size: 0.97em;
+        padding: 2px 9px;
+        border-radius: 12px;
+        font-weight: 600;
+        color: #1a2236;
+        background: #d5f5e3;
+        border: 1px solid #b2e5d7;
+    }
+
+        .returns-badge.negative {
+            background: #ffe3e3;
+            color: #d9042b;
+            border: 1px solid #f3bcbc;
+        }
+
+    .no-investments {
+        padding: 2rem;
+        text-align: center;
+        color: var(--red1);
+        background: var(--red3);
+        border-radius: var(--border-radius);
+        margin-top: 2rem;
+        box-shadow: 0 1px 8px rgba(217,4,43,0.09);
+    }
+</style>
+
+<div class="page-header">
+    <div class="container d-flex justify-content-between align-items-center" style="gap:1rem;">
+        <h3 class="page-title"><i class="fas fa-chart-line me-2"></i>Investments</h3>
+        <a class="add-investment-btn btn btn-secondary" asp-controller="Investments" asp-action="Add">
+            <i class="fas fa-plus"></i> Add Investment
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    @if (Model != null && Model.Any())
+    {
+        <div>
+            <div class="custom-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Investment Id</th>
+                            <th>Account #</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Current Value</th>
+                            <th>Date</th>
+                            <th>Returns</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var investment in Model)
+                        {
+                            var isNegative = investment.Returns < 0;
+                            <tr class="invest-card">
+                                <td>@investment.InvestmentId</td>
+                                <td>@investment.AccountNumber</td>
+                                <td><span class="type-badge">@investment.InvestmentType</span></td>
+                                <td class="amount">$@investment.InvestmentAmount</td>
+                                <td class="amount">$@investment.CurrentValue</td>
+                                <td>@investment.InvestmentDate.ToString("MMM dd, yyyy")</td>
+                                <td>
+                                    <span class="returns-badge @(isNegative ? "negative" : "")">
+                                        @(isNegative ? "-" : "+")$@Math.Abs(investment.Returns)
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="no-investments">
+            <i class="fas fa-chart-line fa-2x mb-2"></i>
+            <h4>No investments found.</h4>
+            <p>Your investments will appear here.</p>
+        </div>
+    }
+</div>

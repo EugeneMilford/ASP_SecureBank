@@ -24,10 +24,12 @@ namespace SecureBank.API.Controllers
         public async Task<ActionResult<IEnumerable<LoanDto>>> GetLoans()
         {
             var loans = await _loanRepository.GetLoansAsync();
+
             var dtos = loans.Select(l => new LoanDto
             {
                 LoanId = l.LoanId,
                 AccountId = l.AccountId,
+                AccountNumber = l.Account.AccountNumber,
                 LoanAmount = l.LoanAmount,
                 InterestRate = l.InterestRate,
                 LoanStartDate = l.LoanStartDate,
