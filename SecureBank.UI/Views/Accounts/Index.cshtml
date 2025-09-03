@@ -152,6 +152,8 @@
                 <div class="balance-info">
                     <span>Balance: <span class="balance-amount">@account.Balance</span></span>
                     <span class="created-date">Created: @account.CreatedDate</span>
+                    <a asp-controller="Accounts" asp-action="Edit" asp-route-id="@account.AccountId"
+                        class="btn btn-secondary">Edit</a>
                 </div>
             </div>
             <div class="card-body">
