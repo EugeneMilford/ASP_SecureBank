@@ -146,6 +146,7 @@
                             <th>Payment Date</th>
                             <th>Reference</th>
                             <th>Account #</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -158,6 +159,11 @@
                                 <td class="bill-date">@bill.PaymentDate.ToString("MMM dd, yyyy")</td>
                                 <td class="ref-number">@bill.ReferenceNumber</td>
                                 <td>@bill.AccountNumber</td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@bill.BillId" class="btn btn-info btn-sm">Details</a>
+                                    <a asp-action="Edit" asp-route-id="@bill.BillId" class="btn btn-secondary btn-sm">Edit</a>
+                                    <a asp-action="Delete" asp-route-id="@bill.BillId" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
                             </tr>
                         }
                     </tbody>

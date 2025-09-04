@@ -1,0 +1,36 @@
+﻿@model SecureBank.UI.Models.DTO.BillDto
+
+@{
+    ViewBag.Title = "Bill Payment Details";
+}
+
+<h2>Bill Payment Details</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Bill ID</th>
+        <td>@Model.BillId</td>
+    </tr>
+    <tr>
+        <th>Account Number</th>
+        <td>@Model.AccountNumber</td>
+    </tr>
+    <tr>
+        <th>Amount</th>
+        <td>@Model.Amount.ToString("C")</td>
+    </tr>
+    <tr>
+        <th>Biller</th>
+        <td>@Model.Biller</td>
+    </tr>
+    <tr>
+        <th>Payment Date</th>
+        <td>@Model.PaymentDate.ToString("yyyy-MM-dd")</td>
+    </tr>
+    <tr>
+        <th>Reference Number</th>
+        <td>@Model.ReferenceNumber</td>
+    </tr>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

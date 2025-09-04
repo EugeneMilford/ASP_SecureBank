@@ -118,29 +118,6 @@ namespace SecureBank.UI.Controllers
 
             return View();
         }
-
-        [HttpPost]
-        public async Task<IActionResult> Delete(AccountDto request)
-        {
-            try
-            {
-                var client = _httpClientFactory.CreateClient();
-
-                var httpResponseMessage = await client.DeleteAsync($"https://localhost:7251/api/accounts/{request.AccountId}");
-
-                httpResponseMessage.EnsureSuccessStatusCode();
-
-                return RedirectToAction("Index", "Accounts");
-            }
-            catch (Exception ex)
-            {
-                // Console
-            }
-
-            return View("Edit");
-        }
-
-
     }
 }
 
