@@ -21,6 +21,7 @@ namespace SecureBank.API.Repositories.Implementation
                 .Include(a => a.Loans)
                 .Include(a => a.CreditCards)
                 .Include(a => a.Investments)
+                .Include(a => a.Transfers)
                 .ToListAsync();
         }
 
@@ -60,6 +61,11 @@ namespace SecureBank.API.Repositories.Implementation
             _context.Set<Account>().Remove(account);
             await _context.SaveChangesAsync();
             return account;
+        }
+
+        public async Task<Account?> GetByAccountNumberAsync(string accountNumber)
+        {
+            return await _context.accounts.FirstOrDefaultAsync(a => a.AccountNumber == accountNumber);
         }
     }
 }

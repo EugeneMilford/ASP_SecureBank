@@ -1,0 +1,95 @@
+﻿@model SecureBank.UI.Models.AddInvestmentViewModel
+
+@{
+    ViewData["Title"] = "Add Investment";
+}
+
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Investments</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Investments" asp-action="Index">Investments</a></li>
+    </ol>
+</div>
+
+<br />
+
+<h2>Add New Investment</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Add" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="AccountId" class="control-label">Account</label>
+                <select asp-for="AccountId" class="form-control" asp-items="ViewBag.Accounts">
+                    <option value="">-- Select Account --</option>
+                </select>
+                <span asp-validation-for="AccountId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="InvestmentAmount" class="control-label">Investment Amount</label>
+                <input asp-for="InvestmentAmount" class="form-control" type="number" step="0.01" min="0" />
+                <span asp-validation-for="InvestmentAmount" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="InvestmentType" class="control-label">Investment Type</label>
+                <select asp-for="InvestmentType" class="form-control" asp-items="ViewBag.InvestmentTypes">
+                    <option value="">-- Select Investment Type --</option>
+                </select>
+                <span asp-validation-for="InvestmentType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ExpectedReturn" class="control-label">Expected Return (%)</label>
+                <input asp-for="ExpectedReturn" class="form-control" type="number" step="0.01" min="0" max="100" />
+                <span asp-validation-for="ExpectedReturn" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="InvestmentStartDate" class="control-label">Investment Start Date</label>
+                <input asp-for="InvestmentStartDate" class="form-control" type="date" />
+                <span asp-validation-for="InvestmentStartDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MaturityDate" class="control-label">Maturity Date</label>
+                <input asp-for="MaturityDate" class="form-control" type="date" />
+                <span asp-validation-for="MaturityDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create Investment" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Investment Information</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Note:</strong> Please ensure you have sufficient funds in your selected account before creating an investment.</p>
+                <h6>Available Investment Types:</h6>
+                <ul>
+                    <li><strong>Stocks:</strong> Equity investments in companies</li>
+                    <li><strong>Bonds:</strong> Fixed-income securities</li>
+                    <li><strong>Mutual Funds:</strong> Professionally managed investment funds</li>
+                    <li><strong>ETFs:</strong> Exchange-traded funds</li>
+                    <li><strong>Fixed Deposit:</strong> Low-risk, guaranteed return</li>
+                    <li><strong>Real Estate:</strong> Property investment</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

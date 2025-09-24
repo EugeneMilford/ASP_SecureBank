@@ -15,6 +15,9 @@ namespace SecureBank.API.Data
         public DbSet<BillPayment> billPayments { get; set; }
         public DbSet<Loan> loans { get; set; }
         public DbSet<Investment> investments { get; set; }
+        public DbSet<Transfer> transfers { get; set; }
+        public DbSet<Contact> contacts { get; set; }
+        public DbSet<User> users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,9 +37,15 @@ namespace SecureBank.API.Data
                 .HasForeignKey(l => l.AccountId);
 
             modelBuilder.Entity<Account>()
-                .HasMany(a => a.Investments)
-                .WithOne(i => i.Account)
-                .HasForeignKey(i => i.AccountId);
+                .HasMany(a => a.Transfers)
+                .WithOne(t => t.Account)
+                .HasForeignKey(t => t.AccountId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Accounts)
+                .WithOne(a => a.User)
+                .HasForeignKey(a => a.UserId);
         }
     }
 }

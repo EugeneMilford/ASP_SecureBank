@@ -1,142 +1,20 @@
 ﻿@model IEnumerable<SecureBank.UI.Models.DTO.AccountDetailsDto>
 
-<style>
-    :root {
-        --primary-color: #2c5530;
-        --secondary-color: #f8f9fa;
-        --accent-color: #28a745;
-        --border-radius: 6px;
-        --card-shadow: 0 2px 4px rgba(0,0,0,0.06);
-    }
+<!-- Page Header -->
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Accounts</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item active text-primary">Accounts</li>
+    </ol>
+</div>
 
-    body {
-        background: #f7f8fa;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 15px;
-    }
-
-    .page-header {
-        background: var(--primary-color);
-        color: #fff;
-        padding: 1rem 0;
-        margin-bottom: 1.2rem;
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
-    }
-    .page-title {
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin: 0;
-    }
-    .add-account-btn {
-        background: var(--accent-color);
-        border: none;
-        padding: 7px 16px;
-        border-radius: var(--border-radius);
-        font-size: 0.95rem;
-        font-weight: 500;
-        color: #fff;
-        text-decoration: none;
-        transition: background 0.2s;
-    }
-    .add-account-btn:hover {
-        background: #218838;
-    }
-
-    .account-card {
-        border: 1px solid #eee;
-        border-radius: var(--border-radius);
-        box-shadow: var(--card-shadow);
-        margin-bottom: 1.2rem;
-        overflow: hidden;
-        transition: box-shadow 0.2s;
-        background: #fff;
-    }
-    .account-card:hover {
-        box-shadow: 0 4px 12px rgba(44,85,48,0.13);
-    }
-    .account-header {
-        background: #f6f9f6;
-        border-bottom: 1px solid #e3e5ea;
-        padding: 0.8rem 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .account-number {
-        font-size: 1.05rem;
-        font-weight: 600;
-        color: var(--primary-color);
-    }
-    .account-type {
-        background: var(--primary-color);
-        color: #fff;
-        border-radius: 14px;
-        font-size: 0.8rem;
-        padding: 2px 10px;
-        font-weight: 500;
-    }
-    .balance-info {
-        font-size: 0.97rem;
-        display: flex;
-        gap: 1.2rem;
-        align-items: center;
-        margin-top: 0.2rem;
-    }
-    .balance-amount {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: var(--accent-color);
-    }
-    .created-date {
-        color: #888;
-        font-size: 0.85rem;
-        margin-left: 0.5rem;
-    }
-    .section-header {
-        font-size: 1rem;
-        font-weight: 600;
-        background: none;
-        color: var(--primary-color);
-        margin: 1rem 0 0.3rem 0;
-        padding: 0;
-    }
-    .custom-table table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.96rem;
-        margin-bottom: 0.7rem;
-    }
-    .custom-table th,
-    .custom-table td {
-        padding: 0.45rem 0.35rem;
-        text-align: left;
-        border-bottom: 1px solid #f0f2f4;
-        vertical-align: middle;
-        font-size: 0.95rem;
-    }
-    .custom-table th {
-        background: #f5f7fa;
-        color: #38563b;
-        font-weight: 600;
-        font-size: 0.93rem;
-        border: none;
-    }
-    .custom-table tr:last-child td {
-        border-bottom: none;
-    }
-    .amount {
-        font-weight: 600;
-        color: var(--accent-color);
-    }   
-    }
-</style>
-
-<div class="page-header">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center" style="gap:1rem;">
-            <h3 class="page-title">Accounts</h3>
-            <a class="add-account-btn btn btn-secondary" asp-controller="Accounts" asp-action="Add">Add Account</a>
-        </div>
+<div class="account-page-header">
+    <div class="container d-flex justify-content-between align-items-center" style="gap:1rem;">
+        <h3 class="page-title"><i class="fas fa-university me-2"></i>Accounts</h3>
+        <a class="add-account-btn btn btn-secondary" asp-controller="Accounts" asp-action="Add">
+            <i class="fas fa-plus"></i> Add Account
+        </a>
     </div>
 </div>
 
@@ -153,102 +31,152 @@
                     <span>Balance: <span class="balance-amount">@account.Balance</span></span>
                     <span class="created-date">Created: @account.CreatedDate</span>
                     <a asp-controller="Accounts" asp-action="Edit" asp-route-id="@account.AccountId"
-                        class="btn btn-secondary">Edit</a>
+                       class="btn btn-secondary">Edit</a>
                 </div>
             </div>
             <div class="card-body">
                 <div>
-                    <div class="section-header">Loans</div>
-                    <div class="custom-table">
+                    <div class="account-section-header">Loans</div>
+                    <div class="account-custom-table">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Loan Id</th><th>Amount</th><th>Interest Rate</th><th>Remaining</th><th>Paid Off</th>
+                                    <th>Loan Id</th>
+                                    <th>Amount</th>
+                                    <th>Interest Rate</th>
+                                    <th>Remaining</th>
+                                    <th>Paid Off</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach (var loan in account.Loans)
-                            {
-                                <tr>
-                                    <td>@loan.LoanId</td>
-                                    <td class="amount">@loan.LoanAmount</td>
-                                    <td>@loan.InterestRate</td>
-                                    <td class="amount">@loan.RemainingAmount</td>
-                                    <td>@loan.IsLoanPaidOff</td>
-                                </tr>
-                            }
+                                @foreach (var loan in account.Loans)
+                                {
+                                    <tr>
+                                        <td>@loan.LoanId</td>
+                                        <td class="amount">@loan.LoanAmount</td>
+                                        <td>@loan.InterestRate</td>
+                                        <td class="amount">@loan.RemainingAmount</td>
+                                        <td>@loan.IsLoanPaidOff</td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div>
-                    <div class="section-header">Credit Cards</div>
-                    <div class="custom-table">
+                    <div class="account-section-header">Credit Cards</div>
+                    <div class="account-custom-table">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Card #</th><th>Type</th><th>Limit</th><th>Balance</th><th>Expiry</th>
+                                    <th>Card #</th>
+                                    <th>Type</th>
+                                    <th>Limit</th>
+                                    <th>Balance</th>
+                                    <th>Expiry</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach (var card in account.CreditCards)
-                            {
-                                <tr>
-                                    <td>@card.CardNumber</td>
-                                    <td>@card.CardType</td>
-                                    <td class="amount">@card.CreditLimit</td>
-                                    <td class="amount">@card.CurrentBalance</td>
-                                    <td>@card.ExpiryDate.ToShortDateString()</td>
-                                </tr>
-                            }
+                                @foreach (var card in account.CreditCards)
+                                {
+                                    <tr>
+                                        <td>@card.CardNumber</td>
+                                        <td>@card.CardType</td>
+                                        <td class="amount">@card.CreditLimit</td>
+                                        <td class="amount">@card.CurrentBalance</td>
+                                        <td>@card.ExpiryDate.ToShortDateString()</td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div>
-                    <div class="section-header">Bills</div>
-                    <div class="custom-table">
+                    <div class="account-section-header">Bills</div>
+                    <div class="account-custom-table">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Bill Id</th><th>Biller</th><th>Amount</th><th>Date</th><th>Reference</th>
+                                    <th>Bill Id</th>
+                                    <th>Biller</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th>Reference</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach (var bill in account.Bills)
-                            {
-                                <tr>
-                                    <td>@bill.BillId</td>
-                                    <td>@bill.Biller</td>
-                                    <td class="amount">@bill.Amount</td>
-                                    <td>@bill.PaymentDate.ToShortDateString()</td>
-                                    <td>@bill.ReferenceNumber</td>
-                                </tr>
-                            }
+                                @foreach (var bill in account.Bills)
+                                {
+                                    <tr>
+                                        <td>@bill.BillId</td>
+                                        <td>@bill.Biller</td>
+                                        <td class="amount">@bill.Amount</td>
+                                        <td>@bill.PaymentDate.ToShortDateString()</td>
+                                        <td>@bill.ReferenceNumber</td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div>
-                    <div class="section-header">Investments</div>
-                    <div class="custom-table">
+                    <div class="account-section-header">Investments</div>
+                    <div class="account-custom-table">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Investment Id</th><th>Type</th><th>Amount</th><th>Current Value</th><th>Date</th>
+                                    <th>Investment Id</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Current Value</th>
+                                    <th>Date</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach (var inv in account.Investments)
-                            {
+                                @foreach (var inv in account.Investments)
+                                {
+                                    <tr>
+                                        <td>@inv.InvestmentId</td>
+                                        <td>@inv.InvestmentType</td>
+                                        <td class="amount">@inv.InvestmentAmount</td>
+                                        <td class="amount">@inv.CurrentValue</td>
+                                        <td>@inv.InvestmentDate.ToShortDateString()</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <div class="account-section-header">Transfers</div>
+                    <div class="account-custom-table">
+                        <table>
+                            <thead>
                                 <tr>
-                                    <td>@inv.InvestmentId</td>
-                                    <td>@inv.InvestmentType</td>
-                                    <td class="amount">@inv.InvestmentAmount</td>
-                                    <td class="amount">@inv.CurrentValue</td>
-                                    <td>@inv.InvestmentDate.ToShortDateString()</td>
+                                    <th>Transfer Id</th>
+                                    <th>Name</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th>Reference</th>
+                                    <th>Account #</th>
+                                    <th>From Account #</th>
+                                    <th>To Account #</th>
                                 </tr>
-                            }
+                            </thead>
+                            <tbody>
+                                    @foreach (var transfer in account.Transfers)
+                                    {
+                                        <tr class="transfer-row">
+                                            <td>@transfer.TransferId</td>
+                                            <td>@transfer.Name</td>
+                                            <td class="amount">@transfer.Amount</td>
+                                            <td>@transfer.TransferDate.ToShortDateString()</td>
+                                            <td>@transfer.Reference</td>
+                                            <td>@transfer.AccountNumber</td>
+                                            <td>@transfer.FromAccountNumber</td>
+                                            <td>@transfer.ToAccountNumber</td>
+                                        </tr>
+                                    }
                             </tbody>
                         </table>
                     </div>
@@ -256,6 +184,55 @@
             </div>
         </div>
     }
+</div>
+
+<!-- Features Start -->
+<div class="container-xxl feature py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-4">Why Open Your Account with Secure Bank?</h1>
+                <p class="mb-4">
+                    Experience secure, flexible, and convenient banking with Secure Bank accounts. Open an account in minutes and gain access to powerful tools for managing your finances, tracking your spending, and keeping your money safe.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="feature-box border rounded p-4">
+                                    <i class="fa fa-university fa-3x text-primary mb-3"></i>
+                                    <h4 class="mb-3">Quick Account Setup</h4>
+                                    <p class="mb-3">
+                                        Open your Secure Bank account quickly and easily. Enjoy a hassle-free process with instant online access to your funds.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="feature-box border rounded p-4">
+                                    <i class="fa fa-headset fa-3x text-primary mb-3"></i>
+                                    <h4 class="mb-3">24/7 Customer Service</h4>
+                                    <p class="mb-3">
+                                        Need help with your account? Our friendly support team is available around the clock to assist you whenever you need it.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="feature-box border rounded p-4">
+                            <i class="fa fa-lock fa-3x text-primary mb-3"></i>
+                            <h4 class="mb-3">Secure Banking</h4>
+                            <p class="mb-3">
+                                Rest easy knowing your money and information are protected by Secure Bank’s advanced security technologies and fraud prevention tools.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 

@@ -4,7 +4,16 @@
     ViewBag.Title = "Bill Payment Details";
 }
 
-<h2>Bill Payment Details</h2>
+<!-- Page Header -->
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Bill Payments</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="BillPayments" asp-action="Index">Bills</a></li>
+    </ol>
+</div>
+
+<br />
 
 <table class="table table-bordered">
     <tr>
@@ -34,3 +43,4 @@
 </table>
 
 <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+

@@ -5,57 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SecureBank.UI</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/SecureBank.UI.styles.css" asp-append-version="true" />
+    <!-- Font Awesome CDN for fa-icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="~/css/Bank.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SecureBank.UI</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="Index">Accounts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="BillPayments" asp-action="Index">Bills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Loans" asp-action="Index">Loans</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="CreditCards" asp-action="Index">Credit Cards</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Investments" asp-action="Index">Investments</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+
+            <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">Secure Bank</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
+                    <li><a asp-area="" asp-controller="Accounts" asp-action="Index" class="nav-link">Accounts</a></li>
+                    <li><a asp-area="" asp-controller="BillPayments" asp-action="Index" class="nav-link">Bills</a></li>
+                    <li><a asp-area="" asp-controller="Transfers" asp-action="Index" class="nav-link">Transfers</a></li>
+                    <li><a asp-area="" asp-controller="Loans" asp-action="Index" class="nav-link">Loans</a></li>
+                    <li><a asp-area="" asp-controller="CreditCards" asp-action="Index" class="nav-link">Credit Cards</a></li>
+                    <li><a asp-area="" asp-controller="Investments" asp-action="Index" class="nav-link">Investments</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
     </header>
+
     <div class="container">
-        <main role="main" class="pb-3">
+        <main class="main" role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <br />
+
+    <footer id="footer" class="footer dark-background">
         <div class="container">
-            &copy; 2025 - SecureBank.UI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <h3 class="sitename">Secure Bank</h3>
+            <p>Your trust is our priority. Providing secure and reliable banking solutions to protect your assets and personal information.</p>
+            <div class="social-links d-flex justify-content-center">
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="Skype"><i class="fab fa-skype"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <span>&copy; 2025</span> <strong class="px-1 sitename">Secure Bank</strong> <span>All Rights Reserved</span>
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

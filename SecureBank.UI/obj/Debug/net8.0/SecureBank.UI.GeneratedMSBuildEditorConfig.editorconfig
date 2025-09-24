@@ -51,6 +51,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFBheW1lbnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/CreditCards/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlZGl0Q2FyZHNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/CreditCards/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlZGl0Q2FyZHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/CreditCards/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlZGl0Q2FyZHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/CreditCards/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlZGl0Q2FyZHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/CreditCards/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlZGl0Q2FyZHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -63,8 +79,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Investments/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudHNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Investments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Investments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Investments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Loans/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Loans/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Loans/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Loans/Index.cshtml]
@@ -77,6 +117,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Transfers/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJzXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Transfers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Transfers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Transfers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/Transfers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNmZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Bank Project/SecureBank/SecureBank.UI/Views/_ViewImports.cshtml]

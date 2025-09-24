@@ -1,0 +1,57 @@
+﻿@model SecureBank.UI.Models.DTO.CreditCardDto
+
+@{
+    ViewBag.Title = "Credit Card Details";
+}
+
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Credit Cards</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="CreditCards" asp-action="Index">Credit Cards</a></li>
+    </ol>
+</div>
+
+<br />
+
+<h2>Credit Card Details</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<dl class="row">
+    <dt class="col-sm-3">Credit Card ID</dt>
+    <dd class="col-sm-9">@Model.CreditId</dd>
+    <dt class="col-sm-3">Account ID</dt>
+    <dd class="col-sm-9">@Model.AccountId</dd>
+    <dt class="col-sm-3">Account Number</dt>
+    <dd class="col-sm-9">@Model.AccountNumber</dd>
+    <dt class="col-sm-3">Card Number</dt>
+    <dd class="col-sm-9">@Model.CardNumber</dd>
+    <dt class="col-sm-3">Expiry Date</dt>
+    <dd class="col-sm-9">@Model.ExpiryDate.ToString("yyyy-MM-dd")</dd>
+    <dt class="col-sm-3">Credit Limit</dt>
+    <dd class="col-sm-9">@Model.CreditLimit</dd>
+    <dt class="col-sm-3">Current Balance</dt>
+    <dd class="col-sm-9">@Model.CurrentBalance</dd>
+</dl>
+
+<div class="mb-3">
+    <form asp-action="ProcessCharge" method="post" class="form-inline d-inline">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Model.CreditId" />
+        <input type="number" name="amount" step="0.01" placeholder="Charge Amount" class="form-control" required />
+        <button type="submit" class="btn btn-warning">Charge</button>
+    </form>
+    <form asp-action="ProcessPayment" method="post" class="form-inline d-inline">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Model.CreditId" />
+        <input type="number" name="amount" step="0.01" placeholder="Payment Amount" class="form-control" required />
+        <button type="submit" class="btn btn-success">Pay</button>
+    </form>
+</div>
+<a asp-action="Edit" asp-route-id="@Model.CreditId" class="btn btn-warning">Edit</a>
+<a asp-action="Delete" asp-route-id="@Model.CreditId" class="btn btn-danger">Delete</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

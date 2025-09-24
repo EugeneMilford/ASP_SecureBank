@@ -113,13 +113,46 @@ namespace SecureBank.UI.Controllers
             return View(model);
         }
 
+        // Fixed Bills Controller Details Method
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
             var client = _httpClientFactory.CreateClient();
+
+            // Get the specific bill
             var billResponse = await client.GetAsync($"https://localhost:7251/api/billpayments/{id}");
             billResponse.EnsureSuccessStatusCode();
             var bill = await billResponse.Content.ReadFromJsonAsync<BillDto>();
+
+            // If AccountNumber is missing, try to get it from the account using AccountId
+            if (bill != null && string.IsNullOrEmpty(bill.AccountNumber) && bill.AccountId > 0)
+            {
+                try
+                {
+                    var account = await client.GetFromJsonAsync<AccountDto>(
+                        $"https://localhost:7251/api/accounts/{bill.AccountId}"
+                    );
+                    if (account != null)
+                    {
+                        bill.AccountNumber = account.AccountNumber;
+                    }
+                }
+                catch
+                {
+                    // If getting account fails, try getting all bills to find the account number
+                    var allBillsResponse = await client.GetAsync("https://localhost:7251/api/billpayments");
+                    if (allBillsResponse.IsSuccessStatusCode)
+                    {
+                        var allBills = await allBillsResponse.Content.ReadFromJsonAsync<List<BillDto>>();
+                        var matchingBill = allBills?.FirstOrDefault(b => b.BillId == id);
+                        if (matchingBill != null && !string.IsNullOrEmpty(matchingBill.AccountNumber))
+                        {
+                            bill.AccountNumber = matchingBill.AccountNumber;
+                        }
+                    }
+                }
+            }
+
             return View(bill);
         }
 
@@ -228,35 +261,31 @@ namespace SecureBank.UI.Controllers
 
             if (bill != null)
             {
-                // Get the AccountDto using AccountNumber
-                var accountsResponse = await client.GetAsync($"https://localhost:7251/api/accounts?accountNumber={bill.AccountNumber}");
-                accountsResponse.EnsureSuccessStatusCode();
-                var accounts = await accountsResponse.Content.ReadFromJsonAsync<List<AccountDto>>();
-                var account = accounts.FirstOrDefault();
+                // Get the account using AccountId (same approach as Edit method)
+                var account = await client.GetFromJsonAsync<AccountDto>(
+                    $"https://localhost:7251/api/accounts/{bill.AccountId}"
+                );
 
                 if (account != null)
                 {
                     // Add the bill amount back to the account balance
-                    var newBalance = account.Balance + bill.Amount;
+                    account.Balance = account.Balance + bill.Amount;
 
-                    // Prepare request body 
-                    var updateRequest = new
-                    {
-                        AccountNumber = account.AccountNumber,
-                        Balance = newBalance,
-                        AccountType = account.AccountType,
-                        CreatedDate = account.CreatedDate
-                    };
-
-                    var updateHttpRequest = new HttpRequestMessage()
+                    // Update the account using the same approach as Edit method
+                    var accountUpdateRequest = new HttpRequestMessage()
                     {
                         Method = HttpMethod.Put,
                         RequestUri = new Uri($"https://localhost:7251/api/accounts/{account.AccountId}"),
-                        Content = new StringContent(JsonSerializer.Serialize(updateRequest), Encoding.UTF8, "application/json")
+                        Content = new StringContent(JsonSerializer.Serialize(account), Encoding.UTF8, "application/json")
                     };
 
-                    var updateResponse = await client.SendAsync(updateHttpRequest);
-                    updateResponse.EnsureSuccessStatusCode();
+                    var accountUpdateResponse = await client.SendAsync(accountUpdateRequest);
+                    if (!accountUpdateResponse.IsSuccessStatusCode)
+                    {
+                        // Handle error - maybe add model state error or log
+                        var errorContent = await accountUpdateResponse.Content.ReadAsStringAsync();
+                        // You might want to return an error view here instead of continuing
+                    }
                 }
             }
 

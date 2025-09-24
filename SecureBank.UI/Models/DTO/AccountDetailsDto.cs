@@ -12,5 +12,6 @@
         public List<CreditCardDto> CreditCards { get; set; } = new();
         public List<BillDto> Bills { get; set; } = new();
         public List<InvestmentDto> Investments { get; set; } = new();
+        public List<TransferDto> Transfers { get; set; } = new();
     }
 }

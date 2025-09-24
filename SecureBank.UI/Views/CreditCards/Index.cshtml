@@ -1,122 +1,14 @@
 ﻿@model IEnumerable<SecureBank.UI.Models.DTO.CreditCardDto>
 
-<style>
-    :root {
-        --orange1: #ff9619;
-        --orange2: #ffa94d;
-        --orange3: #ffd6b4;
-        --orange4: #fff6ec;
-        --orange5: #fff9f2;
-        --text-dark: #512c07;
-        --border-radius: 8px;
-        --card-shadow: 0 2px 8px rgba(255, 150, 25, 0.09);
-    }
-    body {
-        background: var(--orange5);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 15px;
-    }
-    .page-header {
-        background: linear-gradient(90deg, var(--orange2) 55%, var(--orange1) 100%);
-        color: #fff;
-        padding: 1.1rem 0;
-        margin-bottom: 1.2rem;
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
-        box-shadow: 0 2px 8px rgba(255,150,25,0.13);
-    }
-    .page-title {
-        font-size: 1.5rem;
-        font-weight: 500;
-        margin: 0;
-        letter-spacing: 1px;
-    }
-    .add-card-btn {
-        background: var(--orange1);
-        border: none;
-        padding: 7px 18px;
-        border-radius: var(--border-radius);
-        font-size: 1.04rem;
-        font-weight: 500;
-        color: #fff;
-        text-decoration: none;
-        transition: background 0.2s;
-        box-shadow: 0 1px 6px rgba(255,150,25,0.09);
-    }
-    .add-card-btn:hover {
-        background: #e07a08;
-        color: #fff;
-    }
-    .card-card {
-        border: 1px solid #ffe5ce;
-        border-radius: var(--border-radius);
-        box-shadow: var(--card-shadow);
-        margin-bottom: 1.2rem;
-        background: #fff;
-        transition: box-shadow 0.16s;
-        overflow: hidden;
-    }
-    .card-card:hover {
-        box-shadow: 0 4px 14px rgba(255,150,25,0.16);
-    }
-    .custom-table table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.98rem;
-        margin-bottom: 0.2rem;
-    }
-    .custom-table th,
-    .custom-table td {
-        padding: 0.47rem 0.37rem;
-        text-align: left;
-        border-bottom: 1px solid #ffe5ce;
-        vertical-align: middle;
-        font-size: 0.97rem;
-    }
-    .custom-table th {
-        background: var(--orange3);
-        color: var(--orange1);
-        font-weight: 600;
-        font-size: 0.95rem;
-        border: none;
-        letter-spacing: 0.08em;
-    }
-    .custom-table tr:last-child td {
-        border-bottom: none;
-    }
-    .amount {
-        font-weight: 600;
-        color: var(--orange1);
-    }
-    .card-type {
-        font-size: 0.97em;
-        padding: 3px 13px;
-        border-radius: 14px;
-        font-weight: 600;
-        background: var(--orange4);
-        color: var(--orange1);
-        border: 1px solid var(--orange3);
-        display: inline-block;
-        text-transform: uppercase;
-    }
-    .expiry-badge {
-        font-size: 0.96em;
-        background: #fff3e0;
-        color: #e07a08;
-        padding: 2px 10px;
-        border-radius: 12px;
-    }
-    .no-cards {
-        padding: 2rem;
-        text-align: center;
-        color: var(--orange1);
-        background: var(--orange3);
-        border-radius: var(--border-radius);
-        margin-top: 2rem;
-        box-shadow: 0 1px 8px rgba(255,150,25,0.07);
-    }
-</style>
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Credit Cards</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item active text-primary">Credit Card</li>
+    </ol>
+</div>
 
-<div class="page-header">
+<div class="credit-page-header">
     <div class="container d-flex justify-content-between align-items-center" style="gap:1rem;">
         <h3 class="page-title"><i class="fas fa-credit-card me-2"></i>Credit Cards</h3>
         <a class="add-card-btn btn btn-secondary" asp-controller="CreditCards" asp-action="Add">
@@ -129,7 +21,7 @@
     @if (Model != null && Model.Any())
     {
         <div>
-            <div class="custom-table">
+            <div class="credit-custom-table">
                 <table>
                     <thead>
                         <tr>
@@ -140,6 +32,7 @@
                             <th>Current Balance</th>
                             <th>Account #</th>
                             <th>Expiry</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -153,6 +46,11 @@
                                 <td class="amount">$@card.CurrentBalance</td>
                                 <td>@card.AccountNumber</td>
                                 <td><span class="expiry-badge">@card.ExpiryDate.ToString("MM/yy")</span></td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@card.CreditId" class="btn btn-info btn-sm">Details</a>
+                                    <a asp-action="Edit" asp-route-id="@card.CreditId" class="btn btn-secondary btn-sm">Edit</a>
+                                    <a asp-action="Delete" asp-route-id="@card.CreditId" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -168,4 +66,53 @@
             <p>Your credit cards will appear here.</p>
         </div>
     }
+</div>
+
+<!-- Features Start -->
+<div class="container-xxl feature py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-4">Why Choose Secure Bank for Your Credit Card Needs?</h1>
+                <p class="mb-4">
+                    Discover a seamless experience with Secure Bank credit cards. Enjoy fast approvals, enhanced security, and round-the-clock support. Our credit card features are designed to give you control and confidence in your spending.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="feature-box border rounded p-4">
+                                    <i class="fa fa-credit-card fa-3x text-primary mb-3"></i>
+                                    <h4 class="mb-3">Fast Approvals</h4>
+                                    <p class="mb-3">
+                                        Apply and get approved for your Secure Bank credit card in no time. Enjoy a streamlined process with minimal wait.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="feature-box border rounded p-4">
+                                    <i class="fa fa-headset fa-3x text-primary mb-3"></i>
+                                    <h4 class="mb-3">24/7 Support</h4>
+                                    <p class="mb-3">
+                                        Have questions or concerns about your credit card? Our support team is available any time you need assistance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="feature-box border rounded p-4">
+                            <i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
+                            <h4 class="mb-3">Advanced Security</h4>
+                            <p class="mb-3">
+                                Protect your transactions with Secure Bank’s advanced card security measures, including real-time alerts and fraud monitoring.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

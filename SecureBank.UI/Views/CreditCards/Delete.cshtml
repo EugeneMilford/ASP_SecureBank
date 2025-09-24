@@ -1,0 +1,41 @@
+﻿@model SecureBank.UI.Models.DTO.CreditCardDto
+
+@{
+    ViewBag.Title = "Delete Credit Card";
+}
+
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Credit Cards</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="CreditCards" asp-action="Index">Credit Cards</a></li>
+    </ol>
+</div>
+
+<br />
+
+<h2>Delete Credit Card</h2>
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="CreditId" />
+    <div class="form-group">
+        <label asp-for="CardNumber"></label>
+        <input asp-for="CardNumber" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="ExpiryDate"></label>
+        <input asp-for="ExpiryDate" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="CreditLimit"></label>
+        <input asp-for="CreditLimit" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="CurrentBalance"></label>
+        <input asp-for="CurrentBalance" class="form-control" readonly />
+    </div>
+    <p class="text-danger">Are you sure you want to delete this credit card? The card's current balance will be subtracted from the associated account.</p>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

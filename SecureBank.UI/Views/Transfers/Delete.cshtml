@@ -1,0 +1,40 @@
+﻿@model SecureBank.UI.Models.DTO.TransferDto
+
+<!-- Page Header -->
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Delete Transfer</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Transfer" asp-action="Index">Transfers</a></li>
+        <li class="breadcrumb-item active" style="color:var(--accent);">Delete Transfer</li>
+    </ol>
+</div>
+
+<div class="transfer-page-header">
+    <div class="container">
+        <h3 class="page-title"><i class="fas fa-trash-alt me-2"></i>Delete Transfer</h3>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="transfer-card p-4">
+        <h5>Are you sure you want to delete this transfer?</h5>
+        <dl class="row">
+            <dt class="col-sm-4">Transfer Id</dt>
+            <dd class="col-sm-8">@Model.TransferId</dd>
+            <dt class="col-sm-4">Name</dt>
+            <dd class="col-sm-8">@Model.Name</dd>
+            <dt class="col-sm-4">Amount</dt>
+            <dd class="col-sm-8 amount">$@Model.Amount</dd>
+            <dt class="col-sm-4">Date</dt>
+            <dd class="col-sm-8 transfer-date">@Model.TransferDate.ToString("MMM dd, yyyy")</dd>
+            <dt class="col-sm-4">Reference</dt>
+            <dd class="col-sm-8 ref-number">@Model.Reference</dd>
+        </dl>
+        <form asp-action="Delete" method="post" class="d-inline">
+            <input type="hidden" asp-for="TransferId" />
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,121 @@
+﻿@model IEnumerable<SecureBank.UI.Models.DTO.TransferDto>
+
+<!-- Page Header -->
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Transfers</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item active" style="color:var(--accent);">Transfers</li>
+    </ol>
+</div>
+
+<div class="transfer-page-header">
+    <div class="container d-flex justify-content-between align-items-center" style="gap:1rem;">
+        <h3 class="page-title"><i class="fas fa-exchange-alt me-2"></i>Transfers</h3>
+        <a class="add-transfer-btn btn btn-secondary" asp-controller="Transfers" asp-action="Add">
+            <i class="fas fa-plus"></i> Add Transfer
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    @if (Model != null && Model.Any())
+    {
+        <div>
+            <div class="transfer-custom-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transfer Id</th>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Reference</th>
+                            <th>From Account #</th>
+                            <th>To Account #</th>
+                            <th>Account #</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var transfer in Model)
+                        {
+                            <tr class="transfer-card">
+                                <td>@transfer.TransferId</td>
+                                <td>@transfer.Name</td>
+                                <td class="amount">$@transfer.Amount</td>
+                                <td class="transfer-date">@transfer.TransferDate.ToString("MMM dd, yyyy")</td>
+                                <td class="ref-number">@transfer.Reference</td>
+                                <td>@transfer.FromAccountNumber</td>
+                                <td>@transfer.ToAccountNumber</td>
+                                <td>@transfer.AccountNumber</td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@transfer.TransferId" class="btn btn-info btn-sm">Details</a>
+                                    <a asp-action="Edit" asp-route-id="@transfer.TransferId" class="btn btn-secondary btn-sm">Edit</a>
+                                    <a asp-action="Delete" asp-route-id="@transfer.TransferId" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="no-transfers">
+            <i class="fas fa-exchange-alt fa-2x mb-2"></i>
+            <h4>No transfers found.</h4>
+            <p>All your transfers will appear here.</p>
+        </div>
+    }
+</div>
+
+<!-- Features Start -->
+<div class="container-xxl feature py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-4">Why Choose Secure Bank for Transfers?</h1>
+                <p class="mb-4">
+                    Send and receive funds instantly and securely with Secure Bank. Our transfer feature is designed for speed, reliability, and peace of mind—empowering your financial moves.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="feature-box border rounded p-4">
+                                    <i class="fa fa-bolt fa-3x" style="color:var(--main-color); margin-bottom:1rem;"></i>
+                                    <h4 class="mb-3">Instant Transfers</h4>
+                                    <p class="mb-3">
+                                        Move funds instantly between accounts. Fast, dependable, and easy to track—your transfers complete in real time.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="feature-box border rounded p-4">
+                                    <i class="fa fa-headset fa-3x" style="color:var(--main-color); margin-bottom:1rem;"></i>
+                                    <h4 class="mb-3">24/7 Support</h4>
+                                    <p class="mb-3">
+                                        Our support team is here for you day and night to resolve any transfer issues and ensure your transactions run smoothly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="feature-box border rounded p-4">
+                            <i class="fa fa-shield-alt fa-3x" style="color:var(--main-color); margin-bottom:1rem;"></i>
+                            <h4 class="mb-3">Secure Transactions</h4>
+                            <p class="mb-3">
+                                Every transfer is encrypted and protected—your funds and data are safe with Secure Bank's advanced security.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

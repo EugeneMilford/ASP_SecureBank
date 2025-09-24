@@ -1,0 +1,47 @@
+﻿@model SecureBank.UI.Models.AddCreditViewModel
+
+@{
+    ViewBag.Title = "Add Credit Card";
+}
+
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Credit Cards</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="CreditCards" asp-action="Index">Credit Cards</a></li>
+    </ol>
+</div>
+
+<br />
+
+<h2>Add Credit Card</h2>
+
+<form asp-action="Add" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label asp-for="AccountId"></label>
+        <select asp-for="AccountId" class="form-control" asp-items="ViewBag.Accounts"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="CardNumber"></label>
+        <input asp-for="CardNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CreditLimit"></label>
+        <input asp-for="CreditLimit" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CurrentBalance"></label>
+        <input asp-for="CurrentBalance" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ExpiryDate"></label>
+        <input asp-for="ExpiryDate" type="date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CardType"></label>
+        <input asp-for="CardType" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

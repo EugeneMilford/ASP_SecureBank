@@ -1,0 +1,115 @@
+﻿@model SecureBank.UI.Models.DTO.InvestmentDto
+
+@{
+    ViewData["Title"] = "Liquidate Investment";
+}
+
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Investments</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Investments" asp-action="Index">Investments</a></li>
+    </ol>
+</div>
+
+<br />
+
+<h2>Liquidate Investment</h2>
+
+<div class="alert alert-warning" role="alert">
+    <h4 class="alert-heading">Warning!</h4>
+    <p>You are about to liquidate this investment. This action cannot be undone.</p>
+    <hr>
+    <p class="mb-0">The current value of <strong>@Model.CurrentValue.ToString("C")</strong> will be credited back to your account.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4>Investment to be Liquidated</h4>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">Investment ID:</dt>
+                    <dd class="col-sm-8">@Model.InvestmentId</dd>
+
+                    <dt class="col-sm-4">Account Number:</dt>
+                    <dd class="col-sm-8">@Model.AccountNumber</dd>
+
+                    <dt class="col-sm-4">Investment Type:</dt>
+                    <dd class="col-sm-8">
+                        <span class="badge badge-primary">@Model.InvestmentType</span>
+                    </dd>
+
+                    <dt class="col-sm-4">Original Investment:</dt>
+                    <dd class="col-sm-8">@Model.InvestmentAmount.ToString("C")</dd>
+
+                    <dt class="col-sm-4">Current Value:</dt>
+                    <dd class="col-sm-8">
+                        <strong class="@(Model.CurrentValue >= Model.InvestmentAmount ? "text-success" : "text-danger")">
+                            @Model.CurrentValue.ToString("C")
+                        </strong>
+                    </dd>
+
+                    <dt class="col-sm-4">Profit/Loss:</dt>
+                    <dd class="col-sm-8">
+                        @{
+                            var profitLoss = Model.CurrentValue - Model.InvestmentAmount;
+                        }
+                        <strong class="@(profitLoss >= 0 ? "text-success" : "text-danger")">
+                            @profitLoss.ToString("C")
+                        </strong>
+                    </dd>
+
+                    <dt class="col-sm-4">Investment Date:</dt>
+                    <dd class="col-sm-8">@Model.InvestmentDate.ToString("yyyy-MM-dd")</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5>Liquidation Summary</h5>
+            </div>
+            <div class="card-body">
+                <div class="text-center">
+                    <h4 class="@(Model.CurrentValue >= Model.InvestmentAmount ? "text-success" : "text-danger")">
+                        @Model.CurrentValue.ToString("C")
+                    </h4>
+                    <p class="text-muted">Amount to be credited</p>
+                </div>
+
+                <div class="alert alert-info">
+                    <small>
+                        <i class="fas fa-info-circle"></i>
+                        The funds will be transferred back to your account immediately upon liquidation.
+                    </small>
+                </div>
+
+                @{
+                    var returnPercentage = Model.InvestmentAmount != 0 ?
+                    ((Model.CurrentValue - Model.InvestmentAmount) / Model.InvestmentAmount) * 100 : 0;
+                }
+                <hr />
+                <div class="text-center">
+                    <h5 class="@(returnPercentage >= 0 ? "text-success" : "text-danger")">
+                        @returnPercentage.ToString("F2")%
+                    </h5>
+                    <p class="text-muted">Total Return</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="mt-4">
+    <input type="hidden" asp-for="InvestmentId" />
+    <div class="form-group">
+        <input type="submit" value="Confirm Liquidation" class="btn btn-danger"
+               onclick="return confirm('Are you sure you want to liquidate this investment? This action cannot be undone.');" />
+        <a asp-action="Details" asp-route-id="@Model.InvestmentId" class="btn btn-secondary">Cancel</a>
+        <a asp-action="Index" class="btn btn-primary">Back to Investments</a>
+    </div>
+</form>

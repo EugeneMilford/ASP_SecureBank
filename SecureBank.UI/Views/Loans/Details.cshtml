@@ -1,0 +1,44 @@
+﻿@model SecureBank.UI.Models.DTO.LoanDto
+
+@{
+    ViewBag.Title = "Loan Details";
+}
+
+<!-- Page Header -->
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Loans</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Loans" asp-action="Index">Loans</a></li>
+    </ol>
+</div>
+
+<br />
+
+<h2>Loan Details</h2>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">Loan ID</dt>
+        <dd class="col-sm-9">@Model.LoanId</dd>
+        <dt class="col-sm-3">Account Number</dt>
+        <dd class="col-sm-9">@Model.AccountNumber</dd>
+        <dt class="col-sm-3">Loan Amount</dt>
+        <dd class="col-sm-9">@Model.LoanAmount</dd>
+        <dt class="col-sm-3">Interest Rate</dt>
+        <dd class="col-sm-9">@Model.InterestRate</dd>
+        <dt class="col-sm-3">Remaining Amount</dt>
+        <dd class="col-sm-9">@Model.RemainingAmount</dd>
+        <dt class="col-sm-3">Paid Off</dt>
+        <dd class="col-sm-9">@((Model.IsLoanPaidOff ? "Yes" : "No"))</dd>
+        <dt class="col-sm-3">Loan Start Date</dt>
+        <dd class="col-sm-9">@Model.LoanStartDate.ToString("yyyy-MM-dd")</dd>
+        <dt class="col-sm-3">Loan End Date</dt>
+        <dd class="col-sm-9">@Model.LoanEndDate.ToString("yyyy-MM-dd")</dd>
+        <dt class="col-sm-3">Monthly Repayment</dt>
+        <dd class="col-sm-9">@Model.MonthlyRepayment</dd>
+    </dl>
+    <a asp-action="Edit" asp-route-id="@Model.LoanId" class="btn btn-warning">Edit</a>
+    <a asp-action="Delete" asp-route-id="@Model.LoanId" class="btn btn-danger">Delete</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

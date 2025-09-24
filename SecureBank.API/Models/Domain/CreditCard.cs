@@ -18,7 +18,7 @@ namespace SecureBank.API.Models.Domain
         public decimal CurrentBalance { get; set; }
 
         [Required]
-        public int AccountId { get; set; }  // Link to Account
+        public int AccountId { get; set; }  
         public Account Account { get; set; }  
 
         public DateTime ExpiryDate { get; set; }

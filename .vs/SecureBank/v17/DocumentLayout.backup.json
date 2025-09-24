@@ -3,24 +3,236 @@
   "WorkspaceRootPath": "D:\\Projects\\Bank Project\\SecureBank\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\controllers\\billpaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\controllers\\billpaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\investmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\investmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\billpayments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\billpayments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\loandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\loandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\billdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\billdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\transferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\transferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\addtransferviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\addtransferviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\controllers\\transferscontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\controllers\\transferscontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\data\\bankingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\data\\bankingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\domain\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\domain\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\controllers\\billpaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\controllers\\billpaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\contactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\contactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\addcontactrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\addcontactrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\addcreditrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\addcreditrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\domain\\billpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\domain\\billpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\addbillrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\addbillrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\implementation\\contactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\implementation\\contactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\domain\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\domain\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\implementation\\billpaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\implementation\\billpaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\interface\\icontactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\interface\\icontactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\interface\\ibillpaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\interface\\ibillpaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\billpaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\billpaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\transferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\transferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\implementation\\transferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\implementation\\transferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\controllers\\transferscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\controllers\\transferscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\implementation\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\implementation\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\domain\\transfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\domain\\transfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\addtransferrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\addtransferrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\interface\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\interface\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\transfers\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\transfers\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\interface\\itransferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\interface\\itransferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\transfers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\transfers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\addbillviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\addbillviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\billpayments\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\billpayments\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\controllers\\billpaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\controllers\\billpaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\addcreditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\addcreditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\addaccountrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\addaccountrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\investments\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\investments\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\transfers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\transfers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\billpayments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\billpayments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\billpayments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\billpayments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\transfers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\transfers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\transfers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\transfers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\investments\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\investments\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\investments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\investments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\investments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\investments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\wwwroot\\css\\bank.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\wwwroot\\css\\bank.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\creditcards\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\creditcards\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\creditcards\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\creditcards\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\loans\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\loans\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\loans\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\loans\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\loans\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\loans\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\billpayments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -31,172 +243,28 @@
       "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\billpayments\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\billpayments\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\billpayments\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\accounts\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\accounts\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\addbillviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\addbillviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\addloanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\addloanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\addaccountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\addaccountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\domain\\billpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\domain\\billpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\accounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\accounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\controllers\\investmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\controllers\\investmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\addloanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\addloanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\accounts\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\accounts\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\accounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\accounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\accountdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\accountdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\investments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\investments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\investmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\investmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\controllers\\investmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\controllers\\investmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\investmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\investmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\implementation\\investmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\implementation\\investmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\implementation\\billpaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\implementation\\billpaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\implementation\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\implementation\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\creditcarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\creditcarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\domain\\investment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\domain\\investment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\domain\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\domain\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\domain\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\domain\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\creditcards\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\creditcards\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\views\\loans\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\views\\loans\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\implementation\\creditcardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\implementation\\creditcardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\billpaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\billpaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\models\\dto\\loandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\models\\dto\\loandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\implementation\\loanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\implementation\\loanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\data\\bankingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\data\\bankingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\controllers\\loanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\loandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\loandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\models\\dto\\creditcarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\models\\dto\\creditcarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\repositories\\interface\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\repositories\\interface\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|d:\\projects\\bank project\\securebank\\securebank.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DFBB0416-AF5D-40DE-B108-2BAB283627D6}|SecureBank.API\\SecureBank.API.csproj|solutionrelative:securebank.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|d:\\projects\\bank project\\securebank\\securebank.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB87B83C-980A-4FA9-BE55-73096A6E78CF}|SecureBank.UI\\SecureBank.UI.csproj|solutionrelative:securebank.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -206,62 +274,369 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Edit.cshtml",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\BillPayments\\Edit.cshtml",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Edit.cshtml",
-              "RelativeToolTip": "SecureBank.UI\\Views\\BillPayments\\Edit.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-04T11:35:31.267Z",
+              "Title": "LoanDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\LoanDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\LoanDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\LoanDto.cs",
+              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\LoanDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T18:19:48.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Details.cshtml",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\BillPayments\\Details.cshtml",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Details.cshtml",
-              "RelativeToolTip": "SecureBank.UI\\Views\\BillPayments\\Details.cshtml",
-              "ViewState": "AgIAAAQAAAAAAAAAAAArwA8AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-04T11:20:49.768Z",
+              "DocumentIndex": 0,
+              "Title": "InvestmentDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\InvestmentDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\InvestmentDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\InvestmentDto.cs",
+              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\InvestmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T18:19:32.535Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Delete.cshtml",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\BillPayments\\Delete.cshtml",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Delete.cshtml",
-              "RelativeToolTip": "SecureBank.UI\\Views\\BillPayments\\Delete.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-04T11:06:58.999Z",
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\User.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\Domain\\User.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\User.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\Domain\\User.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA9wAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T17:41:52.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Program.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Program.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Program.cs",
+              "RelativeToolTip": "SecureBank.API\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T16:38:05.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ContactsController.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\ContactsController.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Controllers\\ContactsController.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\ContactsController.cs",
+              "RelativeToolTip": "SecureBank.API\\Controllers\\ContactsController.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAH4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T16:35:48.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddContactRequestDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddContactRequestDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\AddContactRequestDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddContactRequestDto.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\AddContactRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T16:33:43.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BankingContext.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Data\\BankingContext.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Data\\BankingContext.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Data\\BankingContext.cs",
+              "RelativeToolTip": "SecureBank.API\\Data\\BankingContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwDAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T16:03:27.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ContactRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\ContactRepository.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Implementation\\ContactRepository.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\ContactRepository.cs",
+              "RelativeToolTip": "SecureBank.API\\Repositories\\Implementation\\ContactRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T16:01:44.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IBillPaymentRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\IBillPaymentRepository.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Interface\\IBillPaymentRepository.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\IBillPaymentRepository.cs",
+              "RelativeToolTip": "SecureBank.API\\Repositories\\Interface\\IBillPaymentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T15:59:59.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IContactRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\IContactRepository.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Interface\\IContactRepository.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\IContactRepository.cs",
+              "RelativeToolTip": "SecureBank.API\\Repositories\\Interface\\IContactRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T15:59:53.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "AddLoanViewModel.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddLoanViewModel.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\AddLoanViewModel.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddLoanViewModel.cs",
-              "RelativeToolTip": "SecureBank.UI\\Models\\AddLoanViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Title": "ContactDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\ContactDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\ContactDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\ContactDto.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\ContactDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T10:25:03.701Z"
+              "WhenOpened": "2025-09-24T15:58:37.167Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Contact.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\Domain\\Contact.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Contact.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\Domain\\Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T15:58:01.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BillPaymentRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\BillPaymentRepository.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Implementation\\BillPaymentRepository.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\BillPaymentRepository.cs",
+              "RelativeToolTip": "SecureBank.API\\Repositories\\Implementation\\BillPaymentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:44:53.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Account.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\Domain\\Account.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Account.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\Domain\\Account.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA9wBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:42:39.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Transfer.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Transfer.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\Domain\\Transfer.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Transfer.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\Domain\\Transfer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:40:50.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AddBillRequestDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddBillRequestDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\AddBillRequestDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddBillRequestDto.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\AddBillRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:35:39.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TransferDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\TransferDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\TransferDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\TransferDto.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\TransferDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:35:32.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BillPayment.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\BillPayment.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\Domain\\BillPayment.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\BillPayment.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\Domain\\BillPayment.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:35:02.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BillPaymentDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\BillPaymentDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\BillPaymentDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\BillPaymentDto.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\BillPaymentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:34:21.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AccountDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AccountDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\AccountDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AccountDto.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\AccountDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:31:28.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Interface\\IAccountRepository.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\IAccountRepository.cs",
+              "RelativeToolTip": "SecureBank.API\\Repositories\\Interface\\IAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:02:22.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Implementation\\AccountRepository.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\AccountRepository.cs",
+              "RelativeToolTip": "SecureBank.API\\Repositories\\Implementation\\AccountRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:02:19.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ITransferRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\ITransferRepository.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Interface\\ITransferRepository.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\ITransferRepository.cs",
+              "RelativeToolTip": "SecureBank.API\\Repositories\\Interface\\ITransferRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:00:57.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "TransferRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\TransferRepository.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Implementation\\TransferRepository.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\TransferRepository.cs",
+              "RelativeToolTip": "SecureBank.API\\Repositories\\Implementation\\TransferRepository.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T09:58:16.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TransfersController.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\TransfersController.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Controllers\\TransfersController.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\TransfersController.cs",
+              "RelativeToolTip": "SecureBank.API\\Controllers\\TransfersController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwCcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T09:57:27.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Controllers\\AccountsController.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "SecureBank.API\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T09:57:25.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BillPaymentsController.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\BillPaymentsController.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Controllers\\BillPaymentsController.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\BillPaymentsController.cs",
+              "RelativeToolTip": "SecureBank.API\\Controllers\\BillPaymentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T09:57:24.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TransferDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\TransferDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\TransferDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\TransferDto.cs",
+              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\TransferDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:15:07.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "AddBillViewModel.cs",
               "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddBillViewModel.cs",
               "RelativeDocumentMoniker": "SecureBank.UI\\Models\\AddBillViewModel.cs",
@@ -269,23 +644,410 @@
               "RelativeToolTip": "SecureBank.UI\\Models\\AddBillViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T10:20:37.923Z"
+              "WhenOpened": "2025-09-22T16:43:10.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "AddTransferViewModel.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddTransferViewModel.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\AddTransferViewModel.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddTransferViewModel.cs",
+              "RelativeToolTip": "SecureBank.UI\\Models\\AddTransferViewModel.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T20:33:19.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AddAccountRequestDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddAccountRequestDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\AddAccountRequestDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddAccountRequestDto.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\AddAccountRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T20:45:21.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddCreditRequestDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddCreditRequestDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\AddCreditRequestDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddCreditRequestDto.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\AddCreditRequestDto.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T20:45:11.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AddTransferRequestDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddTransferRequestDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\AddTransferRequestDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AddTransferRequestDto.cs",
+              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\AddTransferRequestDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T20:45:01.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "CreditCardsController.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\CreditCardsController.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\CreditCardsController.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\CreditCardsController.cs",
+              "RelativeToolTip": "SecureBank.UI\\Controllers\\CreditCardsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T20:27:23.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "BillPaymentsController.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\BillPaymentsController.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\BillPaymentsController.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\BillPaymentsController.cs",
+              "RelativeToolTip": "SecureBank.UI\\Controllers\\BillPaymentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T20:21:40.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TransfersControllers.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\TransfersControllers.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\TransfersControllers.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\TransfersControllers.cs",
+              "RelativeToolTip": "SecureBank.UI\\Controllers\\TransfersControllers.cs",
+              "ViewState": "AgIAAIQBAAAAAAAAAAAAAKoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T20:20:57.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Delete.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Transfers\\Delete.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Delete.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Transfers\\Delete.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T20:17:04.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Transfers\\Edit.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Edit.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Transfers\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T20:16:51.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Details.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Transfers\\Details.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Details.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Transfers\\Details.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T20:16:38.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Add.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Transfers\\Add.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Add.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Transfers\\Add.cshtml",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAGIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T20:16:22.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Add.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Investments\\Add.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Add.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Investments\\Add.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T18:59:17.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Delete.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Investments\\Delete.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Delete.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Investments\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T18:59:09.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Details.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Investments\\Details.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Details.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Investments\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T18:58:27.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Index.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Investments\\Index.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Index.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Investments\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T18:58:19.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Accounts\\Index.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Accounts\\Index.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Accounts\\Index.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Accounts\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T18:53:26.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Index.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\BillPayments\\Index.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Index.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\BillPayments\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T18:50:47.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Index.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Transfers\\Index.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Transfers\\Index.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Transfers\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T18:47:02.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Bank.css",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\css\\Bank.css",
+              "RelativeDocumentMoniker": "SecureBank.UI\\wwwroot\\css\\Bank.css",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\css\\Bank.css",
+              "RelativeToolTip": "SecureBank.UI\\wwwroot\\css\\Bank.css",
+              "ViewState": "AgIAAKoDAAAAAAAAAAAYwIIDAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-21T17:59:55.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\AccountsController.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "SecureBank.UI\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T16:52:57.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T16:43:01.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AccountDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\AccountDto.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\AccountDto.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\AccountDto.cs",
+              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\AccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T16:30:39.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\CreditCards\\Edit.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\CreditCards\\Edit.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\CreditCards\\Edit.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\CreditCards\\Edit.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-08T14:37:58.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\CreditCards\\Details.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\CreditCards\\Details.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\CreditCards\\Details.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\CreditCards\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-08T14:35:49.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AddCreditViewModel.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddCreditViewModel.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\AddCreditViewModel.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddCreditViewModel.cs",
+              "RelativeToolTip": "SecureBank.UI\\Models\\AddCreditViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T14:30:57.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Loans\\Add.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Loans\\Add.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Loans\\Add.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Loans\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T20:17:27.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Loans\\Delete.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Loans\\Delete.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Loans\\Delete.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Loans\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T20:03:53.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Loans\\Details.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Loans\\Details.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Loans\\Details.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\Loans\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T20:00:16.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Edit.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\BillPayments\\Edit.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Edit.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\BillPayments\\Edit.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T11:35:31.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Details.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\BillPayments\\Details.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Details.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\BillPayments\\Details.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T11:20:49.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Delete.cshtml",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\BillPayments\\Delete.cshtml",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Delete.cshtml",
+              "RelativeToolTip": "SecureBank.UI\\Views\\BillPayments\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T11:06:58.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "AddLoanViewModel.cs",
+              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddLoanViewModel.cs",
+              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\AddLoanViewModel.cs",
+              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddLoanViewModel.cs",
+              "RelativeToolTip": "SecureBank.UI\\Models\\AddLoanViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T10:25:03.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
               "Title": "Add.cshtml",
               "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Add.cshtml",
               "RelativeDocumentMoniker": "SecureBank.UI\\Views\\BillPayments\\Add.cshtml",
               "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Add.cshtml",
               "RelativeToolTip": "SecureBank.UI\\Views\\BillPayments\\Add.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-04T10:19:30.428Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 65,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\HomeController.cs",
@@ -297,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 64,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Accounts\\Edit.cshtml",
               "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Accounts\\Edit.cshtml",
@@ -309,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 63,
               "Title": "Add.cshtml",
               "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Accounts\\Add.cshtml",
               "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Accounts\\Add.cshtml",
@@ -321,488 +1083,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AddAccountViewModel.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddAccountViewModel.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\AddAccountViewModel.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\AddAccountViewModel.cs",
-              "RelativeToolTip": "SecureBank.UI\\Models\\AddAccountViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T12:54:55.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Index.cshtml",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Investments\\Index.cshtml",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Investments\\Index.cshtml",
-              "RelativeToolTip": "SecureBank.UI\\Views\\Investments\\Index.cshtml",
-              "ViewState": "AgIAALYAAAAAAAAAAAAgwMYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-03T12:03:08.879Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 61,
               "Title": "InvestmentsController.cs",
               "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\InvestmentsController.cs",
               "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\InvestmentsController.cs",
               "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\InvestmentsController.cs",
               "RelativeToolTip": "SecureBank.UI\\Controllers\\InvestmentsController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-03T12:02:03.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "InvestmentRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\InvestmentRepository.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Implementation\\InvestmentRepository.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\InvestmentRepository.cs",
-              "RelativeToolTip": "SecureBank.API\\Repositories\\Implementation\\InvestmentRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:56:30.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "InvestmentDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\InvestmentDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\InvestmentDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\InvestmentDto.cs",
-              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\InvestmentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:56:01.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Loan.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Loan.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Models\\Domain\\Loan.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Loan.cs",
-              "RelativeToolTip": "SecureBank.API\\Models\\Domain\\Loan.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:55:34.515Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "CreditCard.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\CreditCard.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Models\\Domain\\CreditCard.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\CreditCard.cs",
-              "RelativeToolTip": "SecureBank.API\\Models\\Domain\\CreditCard.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:55:29.969Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Investment.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Investment.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Models\\Domain\\Investment.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\Investment.cs",
-              "RelativeToolTip": "SecureBank.API\\Models\\Domain\\Investment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:55:21.809Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\CreditCards\\Index.cshtml",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\CreditCards\\Index.cshtml",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\CreditCards\\Index.cshtml",
-              "RelativeToolTip": "SecureBank.UI\\Views\\CreditCards\\Index.cshtml",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKoAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-03T11:44:21.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CreditCardsController.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\CreditCardsController.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\CreditCardsController.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\CreditCardsController.cs",
-              "RelativeToolTip": "SecureBank.UI\\Controllers\\CreditCardsController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:42:49.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "CreditCardDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\CreditCardDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\CreditCardDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\CreditCardDto.cs",
-              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\CreditCardDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:37:06.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "LoanRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\LoanRepository.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Implementation\\LoanRepository.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\LoanRepository.cs",
-              "RelativeToolTip": "SecureBank.API\\Repositories\\Implementation\\LoanRepository.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:34:45.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Loans\\Index.cshtml",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Loans\\Index.cshtml",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Loans\\Index.cshtml",
-              "RelativeToolTip": "SecureBank.UI\\Views\\Loans\\Index.cshtml",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJgAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-03T11:18:34.398Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoansController.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\LoansController.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\LoansController.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\LoansController.cs",
-              "RelativeToolTip": "SecureBank.UI\\Controllers\\LoansController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:15:18.738Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "LoanDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\LoanDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\LoanDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\LoanDto.cs",
-              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\LoanDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T16:33:35.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Index.cshtml",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\BillPayments\\Index.cshtml",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\BillPayments\\Index.cshtml",
-              "RelativeToolTip": "SecureBank.UI\\Views\\BillPayments\\Index.cshtml",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAAAJgAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-02T15:36:06.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BillPaymentsController.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\BillPaymentsController.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\BillPaymentsController.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\BillPaymentsController.cs",
-              "RelativeToolTip": "SecureBank.UI\\Controllers\\BillPaymentsController.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAuwA0BAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T15:35:28.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "BankingContext.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Data\\BankingContext.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Data\\BankingContext.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Data\\BankingContext.cs",
-              "RelativeToolTip": "SecureBank.API\\Data\\BankingContext.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAgwCcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T13:13:22.072Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BillPayment.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\BillPayment.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Models\\Domain\\BillPayment.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\Domain\\BillPayment.cs",
-              "RelativeToolTip": "SecureBank.API\\Models\\Domain\\BillPayment.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T13:09:21.783Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Implementation\\AccountRepository.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\AccountRepository.cs",
-              "RelativeToolTip": "SecureBank.API\\Repositories\\Implementation\\AccountRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:57:05.147Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "IAccountRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\IAccountRepository.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Interface\\IAccountRepository.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Interface\\IAccountRepository.cs",
-              "RelativeToolTip": "SecureBank.API\\Repositories\\Interface\\IAccountRepository.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:56:53.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "BillPaymentDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\BillPaymentDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\BillPaymentDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\BillPaymentDto.cs",
-              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\BillPaymentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:54:40.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "AccountDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AccountDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Models\\DTO\\AccountDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Models\\DTO\\AccountDto.cs",
-              "RelativeToolTip": "SecureBank.API\\Models\\DTO\\AccountDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:54:07.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "CreditCardDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\CreditCardDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\CreditCardDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\CreditCardDto.cs",
-              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\CreditCardDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:26:58.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "InvestmentDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\InvestmentDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\InvestmentDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\InvestmentDto.cs",
-              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\InvestmentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:26:28.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BillDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\BillDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\BillDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\BillDto.cs",
-              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\BillDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:25:52.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "LoanDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\LoanDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\LoanDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\LoanDto.cs",
-              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\LoanDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:25:33.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AccountDetailsDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\AccountDetailsDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\AccountDetailsDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\AccountDetailsDto.cs",
-              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\AccountDetailsDto.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAzwAsAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:23:01.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AccountDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\AccountDto.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Models\\DTO\\AccountDto.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Models\\DTO\\AccountDto.cs",
-              "RelativeToolTip": "SecureBank.UI\\Models\\DTO\\AccountDto.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:18:14.952Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SecureBank.UI\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAACMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-31T12:15:44.098Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Accounts\\Index.cshtml",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Views\\Accounts\\Index.cshtml",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Views\\Accounts\\Index.cshtml",
-              "RelativeToolTip": "SecureBank.UI\\Views\\Accounts\\Index.cshtml",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAAAJsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-31T12:14:59.445Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "SecureBank.API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "SecureBank.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-31T12:13:03.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Program.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Program.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Program.cs",
-              "RelativeToolTip": "SecureBank.UI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:11:54.118Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "SecureBank.UI\\Controllers\\AccountsController.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "SecureBank.UI\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAmwHIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:10:52.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "InvestmentsController.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\InvestmentsController.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Controllers\\InvestmentsController.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\InvestmentsController.cs",
-              "RelativeToolTip": "SecureBank.API\\Controllers\\InvestmentsController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwB4AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:36:22.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "CreditCardRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\CreditCardRepository.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Implementation\\CreditCardRepository.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\CreditCardRepository.cs",
-              "RelativeToolTip": "SecureBank.API\\Repositories\\Implementation\\CreditCardRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:31:46.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "BillPaymentRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\BillPaymentRepository.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Repositories\\Implementation\\BillPaymentRepository.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Repositories\\Implementation\\BillPaymentRepository.cs",
-              "RelativeToolTip": "SecureBank.API\\Repositories\\Implementation\\BillPaymentRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:31:43.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "CreditCardsController.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\CreditCardsController.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Controllers\\CreditCardsController.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\CreditCardsController.cs",
-              "RelativeToolTip": "SecureBank.API\\Controllers\\CreditCardsController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwCIAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:26:43.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "LoansController.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\LoansController.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Controllers\\LoansController.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\LoansController.cs",
-              "RelativeToolTip": "SecureBank.API\\Controllers\\LoansController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAADwvyEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:24:13.33Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "SecureBank.API\\Controllers\\AccountsController.cs",
-              "ToolTip": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.API\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "SecureBank.API\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAuwFcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:13:10.551Z",
-              "EditorCaption": ""
             }
           ]
         }

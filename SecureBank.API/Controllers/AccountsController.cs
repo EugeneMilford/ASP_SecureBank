@@ -79,7 +79,21 @@ namespace SecureBank.API.Controllers
                     CurrentValue = i.CurrentValue,
                     InvestmentDate = i.InvestmentDate,
                     Returns = i.CurrentValue - i.InvestmentAmount
-                }).ToList() ?? new List<InvestmentDto>()
+                }).ToList() ?? new List<InvestmentDto>(),
+
+                // Transfers
+                Transfers = a.Transfers?.Select(t => new TransferDto
+                {
+                    TransferId = t.TransferId,
+                    AccountId = t.AccountId,
+                    Name = t.Name,
+                    AccountNumber = t.Account.AccountNumber,
+                    FromAccountNumber = t.FromAccountNumber,
+                    ToAccountNumber = t.ToAccountNumber,
+                    Amount = t.Amount,
+                    TransferDate = t.TransferDate,
+                    Reference = t.Reference
+                }).ToList() ?? new List<TransferDto>()
             }).ToList();
 
             return Ok(dtos);

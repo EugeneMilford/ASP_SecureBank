@@ -81,6 +81,39 @@ namespace SecureBank.API.Migrations
                     b.ToTable("billPayments");
                 });
 
+            modelBuilder.Entity("SecureBank.API.Models.Domain.Contact", b =>
+                {
+                    b.Property<int>("ContactId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactId"));
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ContactId");
+
+                    b.ToTable("contacts");
+                });
+
             modelBuilder.Entity("SecureBank.API.Models.Domain.CreditCard", b =>
                 {
                     b.Property<int>("CreditId")
@@ -184,6 +217,49 @@ namespace SecureBank.API.Migrations
                     b.ToTable("loans");
                 });
 
+            modelBuilder.Entity("SecureBank.API.Models.Domain.Transfer", b =>
+                {
+                    b.Property<int>("TransferId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransferId"));
+
+                    b.Property<int>("AccountId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("FromAccountNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Reference")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ToAccountNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime>("TransferDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("TransferId");
+
+                    b.HasIndex("AccountId");
+
+                    b.ToTable("transfers");
+                });
+
             modelBuilder.Entity("SecureBank.API.Models.Domain.BillPayment", b =>
                 {
                     b.HasOne("SecureBank.API.Models.Domain.Account", "Account")
@@ -228,6 +304,17 @@ namespace SecureBank.API.Migrations
                     b.Navigation("Account");
                 });
 
+            modelBuilder.Entity("SecureBank.API.Models.Domain.Transfer", b =>
+                {
+                    b.HasOne("SecureBank.API.Models.Domain.Account", "Account")
+                        .WithMany("Transfers")
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
             modelBuilder.Entity("SecureBank.API.Models.Domain.Account", b =>
                 {
                     b.Navigation("BillPayments");
@@ -237,6 +324,8 @@ namespace SecureBank.API.Migrations
                     b.Navigation("Investments");
 
                     b.Navigation("Loans");
+
+                    b.Navigation("Transfers");
                 });
 #pragma warning restore 612, 618
         }

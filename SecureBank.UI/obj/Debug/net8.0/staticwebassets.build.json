@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JeYLcVcWscgLrDJZwkmNeiOte+yazFJPzduvwE9pzL0=",
+  "Hash": "5Gyx5scOG9qEVGeqme7ctzTcaHPPYIadXj9BnHoAtfc=",
   "Source": "SecureBank.UI",
   "BasePath": "_content/SecureBank.UI",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SecureBank.UI.bundle.scp.css"
     },
     {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\css\\Bank.css",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "css/Bank#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8908eioi0v",
+      "Integrity": "TAkSgxSYiXNPU1sseRgxvost3hypT5MeeepYKoZTgXU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Bank.css"
+    },
+    {
       "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\css\\site.css",
       "SourceId": "SecureBank.UI",
       "SourceType": "Discovered",
@@ -99,6 +120,216 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\action.jpeg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/action#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8edottsa9t",
+      "Integrity": "0GpObROxKnZprl3mPXW1z5fVMhLLPz6iv2vMdvdJ0xs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\action.jpeg"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\features.jpeg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/features#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4ovn24qce0",
+      "Integrity": "7I2wtNlBfrmNQkcWw0LmmIXjVttATiv6sCKEiSB/H3U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\features.jpeg"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\hero-bg.jpeg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/hero-bg#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gkynw1lxft",
+      "Integrity": "QJ0aBDIHq/qrqZ2yWFKLGwVUQeIlXbhXUvl9mzOGjYU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\hero-bg.jpeg"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\hero-bg.jpg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/hero-bg#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "90dgfqfmha",
+      "Integrity": "J9Na90+BYvSIzguYOTWII7vDnaurmDghIoj6Ddym4OY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\hero-bg.jpg"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1526628953301-3e589a6a8b74.jpeg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/photo-1526628953301-3e589a6a8b74#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h8hoc111wr",
+      "Integrity": "vxKXZbddFY6PV2PYdxLYedGXQyrnW1GW3wiVSFevOrI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\photo-1526628953301-3e589a6a8b74.jpeg"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1560472355-536de3962603.jpeg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/photo-1560472355-536de3962603#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hk2qrtk6ud",
+      "Integrity": "fyEwWs3ZDX2hMPYxv5XvJsw/o9kRP/uIV4Lqdz8sSWQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\photo-1560472355-536de3962603.jpeg"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1569979230536-b3415317a681.jpeg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/photo-1569979230536-b3415317a681#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qiabk491oz",
+      "Integrity": "/gHj4FiyQL27Q7ii+UDKwKCtq3rWTxU3te2sOT4pmNg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\photo-1569979230536-b3415317a681.jpeg"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1607863680198-23d4b2565df0.jpeg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/photo-1607863680198-23d4b2565df0#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "iwet9l3lhl",
+      "Integrity": "ToLHr07AaQG3HMImsqqduk9wGkEi33TBhdGbEKhO2+M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\photo-1607863680198-23d4b2565df0.jpeg"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1718010571964-bac048b9ded0.jpeg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/photo-1718010571964-bac048b9ded0#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "smfi2bwmn1",
+      "Integrity": "XBJkU2RR6Hfe4EVQf36unU6HT2hIkBKz3s+AozNylPw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\photo-1718010571964-bac048b9ded0.jpeg"
+    },
+    {
+      "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\stats-bg.jpeg",
+      "SourceId": "SecureBank.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\",
+      "BasePath": "_content/SecureBank.UI",
+      "RelativePath": "img/stats-bg#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uh5pf7crte",
+      "Integrity": "ElM3Tb8ayNdHF+iEgsJCvu5j2VW/yMFikNnmz2c3nmE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\stats-bg.jpeg"
     },
     {
       "Identity": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\js\\site.js",
@@ -1321,6 +1552,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/Bank.8908eioi0v.css",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\css\\Bank.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38966"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TAkSgxSYiXNPU1sseRgxvost3hypT5MeeepYKoZTgXU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 21 Sep 2025 18:57:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8908eioi0v"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Bank.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TAkSgxSYiXNPU1sseRgxvost3hypT5MeeepYKoZTgXU="
+        }
+      ]
+    },
+    {
+      "Route": "css/Bank.css",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\css\\Bank.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38966"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TAkSgxSYiXNPU1sseRgxvost3hypT5MeeepYKoZTgXU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 21 Sep 2025 18:57:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TAkSgxSYiXNPU1sseRgxvost3hypT5MeeepYKoZTgXU="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1481,6 +1794,826 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "img/action.8edottsa9t.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\action.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31747"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0GpObROxKnZprl3mPXW1z5fVMhLLPz6iv2vMdvdJ0xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 12:02:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8edottsa9t"
+        },
+        {
+          "Name": "label",
+          "Value": "img/action.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0GpObROxKnZprl3mPXW1z5fVMhLLPz6iv2vMdvdJ0xs="
+        }
+      ]
+    },
+    {
+      "Route": "img/action.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\action.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31747"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0GpObROxKnZprl3mPXW1z5fVMhLLPz6iv2vMdvdJ0xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 12:02:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0GpObROxKnZprl3mPXW1z5fVMhLLPz6iv2vMdvdJ0xs="
+        }
+      ]
+    },
+    {
+      "Route": "img/features.4ovn24qce0.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\features.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135068"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7I2wtNlBfrmNQkcWw0LmmIXjVttATiv6sCKEiSB/H3U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:22:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4ovn24qce0"
+        },
+        {
+          "Name": "label",
+          "Value": "img/features.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7I2wtNlBfrmNQkcWw0LmmIXjVttATiv6sCKEiSB/H3U="
+        }
+      ]
+    },
+    {
+      "Route": "img/features.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\features.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135068"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7I2wtNlBfrmNQkcWw0LmmIXjVttATiv6sCKEiSB/H3U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:22:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7I2wtNlBfrmNQkcWw0LmmIXjVttATiv6sCKEiSB/H3U="
+        }
+      ]
+    },
+    {
+      "Route": "img/hero-bg.90dgfqfmha.jpg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\hero-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "219801"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J9Na90+BYvSIzguYOTWII7vDnaurmDghIoj6Ddym4OY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 26 Nov 2024 00:29:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "90dgfqfmha"
+        },
+        {
+          "Name": "label",
+          "Value": "img/hero-bg.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J9Na90+BYvSIzguYOTWII7vDnaurmDghIoj6Ddym4OY="
+        }
+      ]
+    },
+    {
+      "Route": "img/hero-bg.gkynw1lxft.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\hero-bg.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "196699"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QJ0aBDIHq/qrqZ2yWFKLGwVUQeIlXbhXUvl9mzOGjYU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 12:27:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gkynw1lxft"
+        },
+        {
+          "Name": "label",
+          "Value": "img/hero-bg.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QJ0aBDIHq/qrqZ2yWFKLGwVUQeIlXbhXUvl9mzOGjYU="
+        }
+      ]
+    },
+    {
+      "Route": "img/hero-bg.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\hero-bg.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "196699"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QJ0aBDIHq/qrqZ2yWFKLGwVUQeIlXbhXUvl9mzOGjYU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 12:27:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QJ0aBDIHq/qrqZ2yWFKLGwVUQeIlXbhXUvl9mzOGjYU="
+        }
+      ]
+    },
+    {
+      "Route": "img/hero-bg.jpg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\hero-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "219801"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J9Na90+BYvSIzguYOTWII7vDnaurmDghIoj6Ddym4OY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 26 Nov 2024 00:29:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J9Na90+BYvSIzguYOTWII7vDnaurmDghIoj6Ddym4OY="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1526628953301-3e589a6a8b74.h8hoc111wr.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1526628953301-3e589a6a8b74.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "109489"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vxKXZbddFY6PV2PYdxLYedGXQyrnW1GW3wiVSFevOrI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:22:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h8hoc111wr"
+        },
+        {
+          "Name": "label",
+          "Value": "img/photo-1526628953301-3e589a6a8b74.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vxKXZbddFY6PV2PYdxLYedGXQyrnW1GW3wiVSFevOrI="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1526628953301-3e589a6a8b74.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1526628953301-3e589a6a8b74.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "109489"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vxKXZbddFY6PV2PYdxLYedGXQyrnW1GW3wiVSFevOrI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:22:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vxKXZbddFY6PV2PYdxLYedGXQyrnW1GW3wiVSFevOrI="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1560472355-536de3962603.hk2qrtk6ud.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1560472355-536de3962603.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117305"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fyEwWs3ZDX2hMPYxv5XvJsw/o9kRP/uIV4Lqdz8sSWQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:16:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hk2qrtk6ud"
+        },
+        {
+          "Name": "label",
+          "Value": "img/photo-1560472355-536de3962603.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fyEwWs3ZDX2hMPYxv5XvJsw/o9kRP/uIV4Lqdz8sSWQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1560472355-536de3962603.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1560472355-536de3962603.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117305"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fyEwWs3ZDX2hMPYxv5XvJsw/o9kRP/uIV4Lqdz8sSWQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:16:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fyEwWs3ZDX2hMPYxv5XvJsw/o9kRP/uIV4Lqdz8sSWQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1569979230536-b3415317a681.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1569979230536-b3415317a681.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "276597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/gHj4FiyQL27Q7ii+UDKwKCtq3rWTxU3te2sOT4pmNg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:23:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/gHj4FiyQL27Q7ii+UDKwKCtq3rWTxU3te2sOT4pmNg="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1569979230536-b3415317a681.qiabk491oz.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1569979230536-b3415317a681.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "276597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/gHj4FiyQL27Q7ii+UDKwKCtq3rWTxU3te2sOT4pmNg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:23:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qiabk491oz"
+        },
+        {
+          "Name": "label",
+          "Value": "img/photo-1569979230536-b3415317a681.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/gHj4FiyQL27Q7ii+UDKwKCtq3rWTxU3te2sOT4pmNg="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1607863680198-23d4b2565df0.iwet9l3lhl.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1607863680198-23d4b2565df0.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56153"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ToLHr07AaQG3HMImsqqduk9wGkEi33TBhdGbEKhO2+M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:14:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iwet9l3lhl"
+        },
+        {
+          "Name": "label",
+          "Value": "img/photo-1607863680198-23d4b2565df0.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ToLHr07AaQG3HMImsqqduk9wGkEi33TBhdGbEKhO2+M="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1607863680198-23d4b2565df0.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1607863680198-23d4b2565df0.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56153"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ToLHr07AaQG3HMImsqqduk9wGkEi33TBhdGbEKhO2+M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:14:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ToLHr07AaQG3HMImsqqduk9wGkEi33TBhdGbEKhO2+M="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1718010571964-bac048b9ded0.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1718010571964-bac048b9ded0.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "141763"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XBJkU2RR6Hfe4EVQf36unU6HT2hIkBKz3s+AozNylPw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:17:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XBJkU2RR6Hfe4EVQf36unU6HT2hIkBKz3s+AozNylPw="
+        }
+      ]
+    },
+    {
+      "Route": "img/photo-1718010571964-bac048b9ded0.smfi2bwmn1.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1718010571964-bac048b9ded0.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "141763"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XBJkU2RR6Hfe4EVQf36unU6HT2hIkBKz3s+AozNylPw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 16 Sep 2025 11:17:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "smfi2bwmn1"
+        },
+        {
+          "Name": "label",
+          "Value": "img/photo-1718010571964-bac048b9ded0.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XBJkU2RR6Hfe4EVQf36unU6HT2hIkBKz3s+AozNylPw="
+        }
+      ]
+    },
+    {
+      "Route": "img/stats-bg.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\stats-bg.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "523732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ElM3Tb8ayNdHF+iEgsJCvu5j2VW/yMFikNnmz2c3nmE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 21 Sep 2025 18:35:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ElM3Tb8ayNdHF+iEgsJCvu5j2VW/yMFikNnmz2c3nmE="
+        }
+      ]
+    },
+    {
+      "Route": "img/stats-bg.uh5pf7crte.jpeg",
+      "AssetFile": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\stats-bg.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "523732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ElM3Tb8ayNdHF+iEgsJCvu5j2VW/yMFikNnmz2c3nmE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 21 Sep 2025 18:35:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uh5pf7crte"
+        },
+        {
+          "Name": "label",
+          "Value": "img/stats-bg.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ElM3Tb8ayNdHF+iEgsJCvu5j2VW/yMFikNnmz2c3nmE="
         }
       ]
     },

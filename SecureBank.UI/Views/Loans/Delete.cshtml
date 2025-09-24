@@ -1,0 +1,58 @@
+﻿@model SecureBank.UI.Models.DTO.LoanDto
+
+@{
+    ViewBag.Title = "Delete Loan";
+}
+
+<!-- Page Header -->
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Loans</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Loans" asp-action="Index">Loans</a></li>
+    </ol>
+</div>
+
+<br />
+
+<h2>Delete Loan</h2>
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="LoanId" />
+    <div class="form-group">
+        <label asp-for="AccountNumber"></label>
+        <input asp-for="AccountNumber" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="LoanAmount"></label>
+        <input asp-for="LoanAmount" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="InterestRate"></label>
+        <input asp-for="InterestRate" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="RemainingAmount"></label>
+        <input asp-for="RemainingAmount" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="IsLoanPaidOff"></label>
+        <input asp-for="IsLoanPaidOff" type="checkbox" class="form-check-input" disabled="disabled" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LoanStartDate"></label>
+        <input asp-for="LoanStartDate" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="LoanEndDate"></label>
+        <input asp-for="LoanEndDate" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="MonthlyRepayment"></label>
+        <input asp-for="MonthlyRepayment" class="form-control" readonly />
+    </div>
+    <p class="text-danger">Are you sure you want to delete this loan? The corresponding account balance will be reduced by the loan amount.</p>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

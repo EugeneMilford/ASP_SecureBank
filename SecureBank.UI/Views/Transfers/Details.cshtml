@@ -1,0 +1,42 @@
+﻿@model SecureBank.UI.Models.DTO.TransferDto
+
+<!-- Page Header -->
+<div class="container-fluid accounts-breadcrumb text-center py-5">
+    <h4 class="text-white display-4 mb-4">Transfer Details</h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Transfer" asp-action="Index">Transfers</a></li>
+        <li class="breadcrumb-item active" style="color:var(--accent);">Details</li>
+    </ol>
+</div>
+
+<div class="transfer-page-header">
+    <div class="container">
+        <h3 class="page-title"><i class="fas fa-info-circle me-2"></i>Transfer Details</h3>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="transfer-card p-4">
+        <dl class="row">
+            <dt class="col-sm-4">Transfer Id</dt>
+            <dd class="col-sm-8">@Model.TransferId</dd>
+            <dt class="col-sm-4">Name</dt>
+            <dd class="col-sm-8">@Model.Name</dd>
+            <dt class="col-sm-4">Amount</dt>
+            <dd class="col-sm-8 amount">$@Model.Amount</dd>
+            <dt class="col-sm-4">Date</dt>
+            <dd class="col-sm-8 transfer-date">@Model.TransferDate.ToString("MMM dd, yyyy")</dd>
+            <dt class="col-sm-4">Reference</dt>
+            <dd class="col-sm-8 ref-number">@Model.Reference</dd>
+            <dt class="col-sm-4">From Account #</dt>
+            <dd class="col-sm-8">@Model.FromAccountNumber</dd>
+            <dt class="col-sm-4">To Account #</dt>
+            <dd class="col-sm-8">@Model.ToAccountNumber</dd>
+            <dt class="col-sm-4">Account #</dt>
+            <dd class="col-sm-8">@Model.AccountNumber</dd>
+        </dl>
+        <a asp-action="Edit" asp-route-id="@Model.TransferId" class="btn btn-secondary">Edit</a>
+        <a asp-action="Index" class="btn btn-outline-primary ms-2">Back to Transfers</a>
+    </div>
+</div>

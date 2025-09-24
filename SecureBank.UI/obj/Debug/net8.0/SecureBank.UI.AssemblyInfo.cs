@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecureBank.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6270c7fedb2dae9a041bc9804c96960386f4ea29")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b16968cee2a3229c5eb85a27e05d516966ecd3de")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecureBank.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecureBank.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

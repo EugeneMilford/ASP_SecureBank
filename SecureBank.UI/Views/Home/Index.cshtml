@@ -2,7 +2,226 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+    <img src="~/img/hero-bg.jpeg" alt="Secure Bank Background" data-aos="fade-in">
+
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 100vh;">
+        <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Secure Bank</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+            Your trusted partner in modern banking. Experience secure, convenient, and innovative financial solutions tailored for you.
+        </p>
+        <div data-aos="fade-up" data-aos-delay="300">
+            <a href="#" class="glightbox pulsating-play-btn" aria-label="Watch our introduction video"></a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section for Secure Bank -->
+<section id="about" class="about section py-5">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>About Secure Bank</h2>
+        <p>Discover the values and mission that drive Secure Bank forward.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+        <div class="row gy-4">
+
+            <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                    Secure Bank is committed to delivering modern, secure, and reliable banking services for individuals and businesses. Our platform combines cutting-edge technology with customer-centric solutions, ensuring your financial future is safe, accessible, and convenient.
+                </p>
+                <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Robust security protocols to protect your assets and data.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Easy access to accounts, payments, loans, and investments from any device.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Dedicated support and personalized banking solutions for every customer.</span></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                    At Secure Bank, trust and innovation are at the heart of everything we do. Whether you’re opening your first account or expanding your portfolio, our team is here to guide you every step of the way. Experience seamless digital banking designed for your peace of mind.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Banking Services Section -->
+<section id="services" class="services section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Our Banking Services</h2>
+            <p>Comprehensive financial solutions designed to help you achieve your personal and business goals with confidence and security</p>
+        </div>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item position-relative">
+                        <a href="#" class="stretched-link">
+                            <h3>Credit Cards & Lines</h3>
+                        </a>
+                        <p>Flexible credit solutions with competitive rates, rewards programs, and comprehensive fraud protection to meet your spending needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item position-relative">
+                        <a href="#" class="stretched-link">
+                            <h3>Bill Pay & Management</h3>
+                        </a>
+                        <p>Streamline your finances with automated bill payments, scheduling, and comprehensive expense tracking all in one secure platform.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item position-relative">
+                        <a href="#" class="stretched-link">
+                            <h3>Loans & Mortgages</h3>
+                        </a>
+                        <p>Personal loans, home mortgages, and business financing with competitive rates and personalized terms to fit your unique situation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item position-relative">
+                        <a href="#" class="stretched-link">
+                            <h3>Investment Services</h3>
+                        </a>
+                        <p>Build your wealth with our comprehensive investment portfolio management, retirement planning, and financial advisory services.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-item position-relative">
+                        <a href="#" class="stretched-link">
+                            <h3>Savings & Deposits</h3>
+                        </a>
+                        <p>High-yield savings accounts, certificates of deposit, and money market accounts to help your money grow with guaranteed returns.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-item position-relative">
+                        <a href="#" class="stretched-link">
+                            <h3>Digital Banking</h3>
+                        </a>
+                        <p>24/7 mobile and online banking with secure transactions, instant transfers, and real-time account monitoring from anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<br />
+
+<!-- Call To Action Section -->
+<section id="call-to-action" class="call-to-action section dark-background">
+
+    <img src="~/img/action.jpeg" alt="Secure Bank Call to Action Background">
+
+    <div class="container">
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-xl-9 text-center text-xl-start">
+                <h3>Ready to Secure Your Financial Future?</h3>
+                <p>
+                    Join thousands of customers who trust Secure Bank for safe, innovative, and convenient banking. Open an account today and experience the freedom of managing your finances anytime, anywhere.
+                </p>
+            </div>
+            <div class="col-xl-3 cta-btn-container text-center">
+                <a class="cta-btn align-middle" asp-controller="Accounts" asp-action="Index">Open an Account</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Features Section for Secure Bank -->
+<section id="features" class="features section py-5">
+
+    <div class="container">
+        <div class="row gy-4">
+
+            <div class="features-image col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+                <img src="~/img/features.jpeg" alt="Secure Bank Features">
+            </div>
+
+            <div class="col-lg-6 order-lg-1">
+
+                <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-shield-halved flex-shrink-0"></i>
+                    <div>
+                        <h4>Advanced Security</h4>
+                        <p>Your money and data are protected by industry-leading encryption, secure authentication, and 24/7 monitoring.</p>
+                    </div>
+                </div><
+
+                <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-mobile-screen-button flex-shrink-0"></i>
+                    <div>
+                        <h4>Mobile Banking</h4>
+                        <p>Access your accounts, transfer funds, and pay bills anytime with our intuitive mobile app and responsive online portal.</p>
+                    </div>
+                </div>
+
+                <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-credit-card"></i>
+                    <div>
+                        <h4>Personalized Financial Solutions</h4>
+                        <p>Choose from a range of accounts, loans, and investment options personalized for your financial goals and lifestyle.</p>
+                    </div>
+                </div>
+
+                <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fa-solid fa-headset flex-shrink-0"></i>
+                    <div>
+                        <h4>Dedicated Support</h4>
+                        <p>Our expert team is available to assist you with secure transactions, financial advice, and account management anytime.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section id="stats" class="stats section dark-background">
+    <img src="~/img/stats-bg.jpeg" alt="" data-aos="fade-in">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="subheading text-white">
+            <h3 class="text-white">Our Achievements at Secure Bank</h3>
+            <p class="text-white">At Secure Bank, we pride ourselves on delivering reliable, secure, and efficient banking solutions for our valued customers.</p>
+        </div>
+
+        <div class="row gy-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span class="text-white" data-purecounter-start="0" data-purecounter-end="10,000+" data-purecounter-duration="1" class="purecounter"></span>
+                    <p class="text-white">Happy Customers</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span class="text-white" data-purecounter-start="0" data-purecounter-end="5,000+" data-purecounter-duration="1" class="purecounter"></span>
+                    <p class="text-white">Successful Transactions</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span class="text-white" data-purecounter-start="0" data-purecounter-end="1,200,000+" data-purecounter-duration="1" class="purecounter"></span>
+                    <p class="text-white">Secure Payments</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span class="text-white" data-purecounter-start="0" data-purecounter-end="150+" data-purecounter-duration="1" class="purecounter"></span>
+                    <p class="text-white">Expert Support Team</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br />

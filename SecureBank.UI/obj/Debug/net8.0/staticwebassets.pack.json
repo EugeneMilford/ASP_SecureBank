@@ -5,12 +5,56 @@
       "PackagePath": "staticwebassets\\SecureBank.UI.eceo6bmghr.bundle.scp.css"
     },
     {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\css\\Bank.css",
+      "PackagePath": "staticwebassets\\css\\Bank.css"
+    },
+    {
       "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\action.jpeg",
+      "PackagePath": "staticwebassets\\img\\action.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\features.jpeg",
+      "PackagePath": "staticwebassets\\img\\features.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\hero-bg.jpeg",
+      "PackagePath": "staticwebassets\\img\\hero-bg.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\hero-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\hero-bg.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1526628953301-3e589a6a8b74.jpeg",
+      "PackagePath": "staticwebassets\\img\\photo-1526628953301-3e589a6a8b74.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1560472355-536de3962603.jpeg",
+      "PackagePath": "staticwebassets\\img\\photo-1560472355-536de3962603.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1569979230536-b3415317a681.jpeg",
+      "PackagePath": "staticwebassets\\img\\photo-1569979230536-b3415317a681.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1607863680198-23d4b2565df0.jpeg",
+      "PackagePath": "staticwebassets\\img\\photo-1607863680198-23d4b2565df0.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\photo-1718010571964-bac048b9ded0.jpeg",
+      "PackagePath": "staticwebassets\\img\\photo-1718010571964-bac048b9ded0.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\img\\stats-bg.jpeg",
+      "PackagePath": "staticwebassets\\img\\stats-bg.jpeg"
     },
     {
       "Id": "D:\\Projects\\Bank Project\\SecureBank\\SecureBank.UI\\wwwroot\\js\\site.js",
