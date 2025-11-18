@@ -10,5 +10,8 @@ namespace SecureBank.API.Repositories.Interface
         Task<Account> CreateAsync(Account account);
         Task<Account?> UpdateAsync(int id, Account account);
         Task<Account?> DeleteAsync(int id);
+
+        Task<List<Account>> GetAccountsByUserIdAsync(int userId);
+        Task<Account?> GetByIdWithOwnerAsync(int id);
     }
 }

@@ -1,0 +1,298 @@
+﻿@model SecureBank.UI.Models.DTO.UserRegisterRequestDto
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SecureBank</title>
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+
+    <style>
+        /* Page background - light green theme */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0fff4 0%, #e6fff2 50%, #d9fff0 100%);
+            overflow: hidden;
+        }
+
+        /* Soft floating leaves for subtle motion */
+        .bg-shapes {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .bg-shapes .leaf {
+            position: absolute;
+            border-radius: 40%;
+            background: rgba(10, 120, 80, 0.08);
+            filter: blur(14px);
+            animation: floaty 14s ease-in-out infinite;
+        }
+        .bg-shapes .l1 { width: 360px; height: 300px; top: -90px; left: -120px; }
+        .bg-shapes .l2 { width: 240px; height: 220px; right: -60px; top: 30%; animation-delay: 2s; }
+        .bg-shapes .l3 { width: 420px; height: 340px; bottom: -140px; left: 20%; animation-delay: 4s; }
+
+        /* Layout container */
+        .register-wrap {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 980px;
+            margin: 2.5rem;
+            display: grid;
+            grid-template-columns: 460px 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        /* Left info panel */
+        .info-panel {
+            padding: 2.5rem;
+            border-radius: 18px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.92));
+            box-shadow: 0 10px 30px rgba(12, 80, 50, 0.06);
+            border: 1px solid rgba(10,120,80,0.06);
+        }
+        .info-panel h1 {
+            color: #065f3a;
+            margin-bottom: 0.25rem;
+            font-size: 2rem;
+        }
+        .info-panel p.lead {
+            color: rgba(6,95,58,0.92);
+            margin-bottom: 1rem;
+        }
+        .info-panel .benefits {
+            display:flex;
+            flex-direction:column;
+            gap:0.6rem;
+            margin-top:1rem;
+        }
+        .info-panel .benefit {
+            display:flex;
+            gap:0.6rem;
+            align-items:center;
+            padding:0.6rem 0.8rem;
+            border-radius:10px;
+            background: rgba(6,95,58,0.04);
+            color:#064b33;
+            font-weight:600;
+        }
+
+        /* Register card (right) */
+        .register-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.99), rgba(255,255,255,0.97));
+            padding: 2rem;
+            border-radius: 18px;
+            box-shadow: 0 14px 36px rgba(10,120,80,0.08);
+            border: 1px solid rgba(6,95,58,0.05);
+        }
+        .brand {
+            display:flex;
+            align-items:center;
+            gap:0.75rem;
+            margin-bottom: 1rem;
+        }
+        .brand .logo {
+            width:60px;
+            height:60px;
+            border-radius:12px;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            background: linear-gradient(135deg,#bff9d6,#8feeb0);
+            color:#064b33;
+            font-size:1.6rem;
+            box-shadow: 0 6px 18px rgba(6,95,58,0.06);
+        }
+        .brand h2 {
+            margin:0;
+            color:#064b33;
+            font-size:1.25rem;
+            letter-spacing:0.3px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            height: calc(2.25rem + 1rem);
+            padding: 0.7rem 0.9rem;
+            border: 1px solid rgba(6,95,58,0.10);
+        }
+        .form-label {
+            font-weight:600;
+            color:#065f3a;
+            font-size:0.92rem;
+        }
+
+        .btn-register {
+            background: linear-gradient(90deg,#2ee59a,#00c57a);
+            border: none;
+            color: white;
+            font-weight:700;
+            padding: 0.85rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 26px rgba(0,197,122,0.18);
+            transition: transform .12s ease, box-shadow .12s ease;
+        }
+        .btn-register:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 46px rgba(0,197,122,0.22);
+        }
+
+        .alt-actions {
+            margin-top: 1rem;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:1rem;
+        }
+        .text-muted a { color: #057a4a; font-weight:600; text-decoration:none; }
+        .text-muted a:hover { text-decoration:underline; }
+
+    </style>
+</head>
+<body>
+    <div class="bg-shapes" aria-hidden="true">
+        <div class="leaf l1"></div>
+        <div class="leaf l2"></div>
+        <div class="leaf l3"></div>
+    </div>
+
+    <div class="register-wrap">
+        <!-- Left information panel -->
+        <div class="info-panel">
+            <h1>Create your account</h1>
+            <p class="lead">Join SecureBank and get instant access to secure, modern banking tools. Your money — simplified and protected.</p>
+
+            <div class="benefits" aria-hidden="true">
+                <div class="benefit"><i class="bi bi-shield-check"></i> Bank-level security</div>
+                <div class="benefit"><i class="bi bi-graph-up"></i> Financial insights</div>
+                <div class="benefit"><i class="bi bi-phone"></i> Mobile & web access</div>
+            </div>
+
+            <div style="margin-top:1.25rem; color:#044b34;">
+                <strong>Need help?</strong>
+                <p style="margin:6px 0 0;">Contact support or check our docs to get started quickly.</p>
+            </div>
+        </div>
+
+        <!-- Registration form card -->
+        <div class="register-card">
+            <div class="brand">
+                <div class="logo"><i class="bi bi-bank2"></i></div>
+                <div>
+                    <h2>SecureBank</h2>
+                    <div style="font-size:0.84rem; color:#057a4a; opacity:0.9;">Create your account to get started</div>
+                </div>
+            </div>
+
+            <form asp-action="Register" asp-controller="AuthUser" method="post" novalidate>
+                @Html.AntiForgeryToken()
+
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label asp-for="FirstName" class="form-label">First name</label>
+                        <input asp-for="FirstName" class="form-control" placeholder="First name" />
+                        <span asp-validation-for="FirstName" class="text-danger small"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="LastName" class="form-label">Last name</label>
+                        <input asp-for="LastName" class="form-control" placeholder="Last name" />
+                        <span asp-validation-for="LastName" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="Email" class="form-label">Email</label>
+                        <input asp-for="Email" class="form-control" placeholder="Email address" type="email" />
+                        <span asp-validation-for="Email" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Username" class="form-label">Username</label>
+                        <input asp-for="Username" class="form-control" placeholder="Choose a username" />
+                        <span asp-validation-for="Username" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6 position-relative">
+                        <label asp-for="Password" class="form-label">Password</label>
+                        <input asp-for="Password" type="password" id="passwordFieldReg" class="form-control" placeholder="Create a password" />
+                        <span asp-validation-for="Password" class="text-danger small"></span>
+                        <button type="button" id="togglePasswordReg" class="btn btn-sm" style="position:absolute; right:8px; top:36px; background:transparent; border:none; color:#057a4a;">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="PhoneNumber" class="form-label">Phone</label>
+                        <input asp-for="PhoneNumber" class="form-control" placeholder="Phone number" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Role" class="form-label">Role</label>
+                        <select asp-for="Role" class="form-select">
+                            <option value="User">User</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                        <span asp-validation-for="Role" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-register btn-lg">Create account</button>
+                </div>
+
+                <div class="alt-actions">
+                    <div class="text-muted small">
+                        Already have an account? <a href="@Url.Action("Login", "AuthUser")">Sign in</a>
+                    </div>
+                    <div class="text-muted small">
+                        <a href="#">Terms & privacy</a>
+                    </div>
+                </div>
+            </form>
+
+            <hr style="margin:1.25rem 0; border-color: rgba(5,122,74,0.06)" />
+
+        </div>
+    </div>
+
+    <!-- JS dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Toggle password visibility for register form
+        (function () {
+            const toggle = document.getElementById('togglePasswordReg');
+            const pwd = document.getElementById('passwordFieldReg');
+            if (!toggle || !pwd) return;
+            toggle.addEventListener('click', function () {
+                if (pwd.type === 'password') {
+                    pwd.type = 'text';
+                    toggle.innerHTML = '<i class="bi bi-eye-slash"></i>';
+                } else {
+                    pwd.type = 'password';
+                    toggle.innerHTML = '<i class="bi bi-eye"></i>';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

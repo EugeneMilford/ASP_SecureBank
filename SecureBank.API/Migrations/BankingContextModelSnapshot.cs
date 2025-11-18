@@ -44,7 +44,12 @@ namespace SecureBank.API.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("AccountId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("accounts");
                 });
@@ -260,6 +265,75 @@ namespace SecureBank.API.Migrations
                     b.ToTable("transfers");
                 });
 
+            modelBuilder.Entity("SecureBank.API.Models.Domain.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = 1,
+                            CreatedDate = new DateTime(2025, 9, 28, 17, 24, 27, 211, DateTimeKind.Utc).AddTicks(5213),
+                            Email = "admin@securebank.com",
+                            FirstName = "Admin",
+                            LastName = "User",
+                            Password = "Admin123!",
+                            PhoneNumber = "+1234567890",
+                            Role = "Admin",
+                            Username = "admin"
+                        });
+                });
+
+            modelBuilder.Entity("SecureBank.API.Models.Domain.Account", b =>
+                {
+                    b.HasOne("SecureBank.API.Models.Domain.User", "User")
+                        .WithMany("Accounts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("SecureBank.API.Models.Domain.BillPayment", b =>
                 {
                     b.HasOne("SecureBank.API.Models.Domain.Account", "Account")
@@ -326,6 +400,11 @@ namespace SecureBank.API.Migrations
                     b.Navigation("Loans");
 
                     b.Navigation("Transfers");
+                });
+
+            modelBuilder.Entity("SecureBank.API.Models.Domain.User", b =>
+                {
+                    b.Navigation("Accounts");
                 });
 #pragma warning restore 612, 618
         }

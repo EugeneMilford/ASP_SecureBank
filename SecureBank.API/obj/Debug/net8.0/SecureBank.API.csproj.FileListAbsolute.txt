@@ -146,3 +146,4 @@ D:\Projects\Bank Project\SecureBank\SecureBank.API\obj\Debug\net8.0\refint\Secur
 D:\Projects\Bank Project\SecureBank\SecureBank.API\obj\Debug\net8.0\SecureBank.API.pdb
 D:\Projects\Bank Project\SecureBank\SecureBank.API\obj\Debug\net8.0\SecureBank.API.genruntimeconfig.cache
 D:\Projects\Bank Project\SecureBank\SecureBank.API\obj\Debug\net8.0\ref\SecureBank.API.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -4,6 +4,7 @@ using SecureBank.UI.Models;
 using SecureBank.UI.Models.DTO;
 using System.Text;
 using System.Text.Json;
+using System.Net.Http.Headers;
 
 namespace SecureBank.UI.Controllers
 {
@@ -23,7 +24,22 @@ namespace SecureBank.UI.Controllers
             try
             {
                 var client = _httpClientFactory.CreateClient();
+
+                // Attach JWT token
+                var token = HttpContext.Session.GetString("JWTToken");
+                if (!string.IsNullOrEmpty(token))
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                }
+
                 var httpResponseMessage = await client.GetAsync("https://localhost:7251/api/transfers");
+
+                if (httpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
 
                 httpResponseMessage.EnsureSuccessStatusCode();
 
@@ -36,7 +52,7 @@ namespace SecureBank.UI.Controllers
             }
             catch (Exception ex)
             {
-                // Handle error (log, show error view, etc.)
+                TempData["Error"] = "Unable to load transfers.";
             }
             return View(transfers);
         }
@@ -45,19 +61,42 @@ namespace SecureBank.UI.Controllers
         public async Task<IActionResult> Add()
         {
             var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("https://localhost:7251/api/Accounts");
-            response.EnsureSuccessStatusCode();
 
-            var accounts = await response.Content.ReadFromJsonAsync<List<AccountDto>>();
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
 
-            ViewBag.Accounts = accounts
-                .Select(a => new SelectListItem
+            try
+            {
+                var response = await client.GetAsync("https://localhost:7251/api/Accounts");
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                 {
-                    Value = a.AccountNumber, 
-                    Text = a.AccountNumber
-                }).ToList();
+                    HttpContext.Session.Clear();
+                    return RedirectToAction("Login", "AuthUser");
+                }
 
-            return View();
+                response.EnsureSuccessStatusCode();
+
+                var accounts = await response.Content.ReadFromJsonAsync<List<AccountDto>>();
+
+                ViewBag.Accounts = accounts
+                    .Select(a => new SelectListItem
+                    {
+                        Value = a.AccountNumber,
+                        Text = a.AccountNumber
+                    }).ToList();
+
+                return View();
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Unable to load accounts.";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]
@@ -65,19 +104,28 @@ namespace SecureBank.UI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
 
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
             if (model.FromAccountNumber == model.ToAccountNumber)
             {
                 ModelState.AddModelError("", "Source and destination accounts cannot be the same.");
 
                 var accountsResponse = await client.GetAsync("https://localhost:7251/api/Accounts");
-                accountsResponse.EnsureSuccessStatusCode();
-                var accounts = await accountsResponse.Content.ReadFromJsonAsync<List<AccountDto>>();
-                ViewBag.Accounts = accounts
-                    .Select(a => new SelectListItem
-                    {
-                        Value = a.AccountNumber,
-                        Text = a.AccountNumber
-                    }).ToList();
+                if (accountsResponse.IsSuccessStatusCode)
+                {
+                    var accounts = await accountsResponse.Content.ReadFromJsonAsync<List<AccountDto>>();
+                    ViewBag.Accounts = accounts
+                        .Select(a => new SelectListItem
+                        {
+                            Value = a.AccountNumber,
+                            Text = a.AccountNumber
+                        }).ToList();
+                }
 
                 return View(model);
             }
@@ -117,19 +165,29 @@ namespace SecureBank.UI.Controllers
 
             var httpResponseMessage = await client.SendAsync(httpRequestMessage);
 
+            if (httpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                HttpContext.Session.Clear();
+                TempData["Error"] = "Session expired. Please log in again.";
+                return RedirectToAction("Login", "AuthUser");
+            }
+
             if (!httpResponseMessage.IsSuccessStatusCode)
             {
                 var errorContent = await httpResponseMessage.Content.ReadAsStringAsync();
 
+                // Repopulate dropdown on error
                 var accountsResponse = await client.GetAsync("https://localhost:7251/api/Accounts");
-                accountsResponse.EnsureSuccessStatusCode();
-                var accounts = await accountsResponse.Content.ReadFromJsonAsync<List<AccountDto>>();
-                ViewBag.Accounts = accounts
-                    .Select(a => new SelectListItem
-                    {
-                        Value = a.AccountNumber,
-                        Text = a.AccountNumber
-                    }).ToList();
+                if (accountsResponse.IsSuccessStatusCode)
+                {
+                    var accounts = await accountsResponse.Content.ReadFromJsonAsync<List<AccountDto>>();
+                    ViewBag.Accounts = accounts
+                        .Select(a => new SelectListItem
+                        {
+                            Value = a.AccountNumber,
+                            Text = a.AccountNumber
+                        }).ToList();
+                }
 
                 ModelState.AddModelError(string.Empty, $"API Error: {errorContent}");
                 return View(model);
@@ -138,19 +196,22 @@ namespace SecureBank.UI.Controllers
             var response = await httpResponseMessage.Content.ReadFromJsonAsync<TransferDto>();
             if (response is not null)
             {
+                TempData["Success"] = "Transfer completed successfully!";
                 return RedirectToAction("Index", "Transfers");
             }
 
             // Repopulate accounts if needed
             var accountsResponse2 = await client.GetAsync("https://localhost:7251/api/Accounts");
-            accountsResponse2.EnsureSuccessStatusCode();
-            var accounts2 = await accountsResponse2.Content.ReadFromJsonAsync<List<AccountDto>>();
-            ViewBag.Accounts = accounts2
-                .Select(a => new SelectListItem
-                {
-                    Value = a.AccountNumber,
-                    Text = a.AccountNumber
-                }).ToList();
+            if (accountsResponse2.IsSuccessStatusCode)
+            {
+                var accounts2 = await accountsResponse2.Content.ReadFromJsonAsync<List<AccountDto>>();
+                ViewBag.Accounts = accounts2
+                    .Select(a => new SelectListItem
+                    {
+                        Value = a.AccountNumber,
+                        Text = a.AccountNumber
+                    }).ToList();
+            }
 
             return View(model);
         }
@@ -159,6 +220,13 @@ namespace SecureBank.UI.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var client = _httpClientFactory.CreateClient();
+
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
 
             // Get the specific transfer
             var transferResponse = await client.GetAsync($"https://localhost:7251/api/transfers/{id}");
@@ -202,6 +270,13 @@ namespace SecureBank.UI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
 
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
             var transfer = await client.GetFromJsonAsync<TransferDto>($"https://localhost:7251/api/transfers/{id}");
             if (transfer is not null)
             {
@@ -214,6 +289,13 @@ namespace SecureBank.UI.Controllers
         public async Task<IActionResult> Edit(TransferDto request)
         {
             var client = _httpClientFactory.CreateClient();
+
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
 
             // 1. Get the original transfer
             var originalTransfer = await client.GetFromJsonAsync<TransferDto>($"https://localhost:7251/api/transfers/{request.TransferId}");
@@ -317,19 +399,34 @@ namespace SecureBank.UI.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-            // Get Transfer info for confirmation
             var client = _httpClientFactory.CreateClient();
+
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
+            // Get Transfer info for confirmation
             var transferResponse = await client.GetAsync($"https://localhost:7251/api/transfers/{id}");
             transferResponse.EnsureSuccessStatusCode();
             var transfer = await transferResponse.Content.ReadFromJsonAsync<TransferDto>();
 
-            return View(transfer); // Show confirmation view
+            return View(transfer);
         }
 
         [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var client = _httpClientFactory.CreateClient();
+
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
 
             // Get Transfer info
             var transferResponse = await client.GetAsync($"https://localhost:7251/api/transfers/{id}");
@@ -366,7 +463,7 @@ namespace SecureBank.UI.Controllers
                         if (!senderUpdateResponse.IsSuccessStatusCode)
                         {
                             var errorContent = await senderUpdateResponse.Content.ReadAsStringAsync();
-                            // Handle error - maybe add model state error or log
+                            TempData["Error"] = "Failed to update sender balance.";
                         }
                     }
 
@@ -385,7 +482,7 @@ namespace SecureBank.UI.Controllers
                         if (!recipientUpdateResponse.IsSuccessStatusCode)
                         {
                             var errorContent = await recipientUpdateResponse.Content.ReadAsStringAsync();
-                            // Handle error - maybe add model state error or log
+                            TempData["Error"] = "Failed to update recipient balance.";
                         }
                     }
                 }

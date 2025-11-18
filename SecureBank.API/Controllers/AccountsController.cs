@@ -1,27 +1,38 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SecureBank.API.Models.Domain;
 using SecureBank.API.Models.DTO;
 using SecureBank.API.Repositories.Interface;
+using SecureBank.API.Services.Interface;
 
 namespace SecureBank.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class AccountsController : ControllerBase
     {
         private readonly IAccountRepository _accountRepository;
+        private readonly IAuthService _authService;
 
-        public AccountsController(IAccountRepository accountRepository)
+        public AccountsController(IAccountRepository accountRepository, IAuthService authService)
         {
             _accountRepository = accountRepository;
+            _authService = authService;
         }
 
-        // GET: api/Accounts
+        // GET: api/Accounts - Returns only current user's accounts (or all if admin)
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AccountDto>>> GetAccounts()
         {
-            var accounts = await _accountRepository.GetAccountsAsync();
+            var userId = _authService.GetCurrentUserId(User);
+            var isAdmin = _authService.IsAdmin(User);
+
+            // Admin sees all accounts, regular users see only their own
+            var accounts = isAdmin
+                ? await _accountRepository.GetAccountsAsync()
+                : await _accountRepository.GetAccountsByUserIdAsync(userId);
+
             var dtos = accounts.Select(a => new AccountDto
             {
                 AccountId = a.AccountId,
@@ -35,7 +46,7 @@ namespace SecureBank.API.Controllers
                 {
                     BillId = b.BillId,
                     AccountId = b.AccountId,
-                    AccountNumber = b.Account.AccountNumber, 
+                    AccountNumber = b.Account.AccountNumber,
                     Amount = b.Amount,
                     PaymentDate = b.PaymentDate,
                     Biller = b.Biller,
@@ -66,7 +77,7 @@ namespace SecureBank.API.Controllers
                     AccountNumber = c.Account.AccountNumber,
                     ExpiryDate = c.ExpiryDate,
                     CardType = c.CardType
-                    }).ToList() ?? new List<CreditCardDto>(),
+                }).ToList() ?? new List<CreditCardDto>(),
 
                 // Investments
                 Investments = a.Investments?.Select(i => new InvestmentDto
@@ -103,6 +114,12 @@ namespace SecureBank.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<AccountDto>> GetAccount(int id)
         {
+            // Check if user can access this account
+            if (!await _authService.CanAccessAccountAsync(User, id))
+            {
+                return Forbid();
+            }
+
             var account = await _accountRepository.GetByIdAsync(id);
             if (account == null)
                 return NotFound();
@@ -122,12 +139,15 @@ namespace SecureBank.API.Controllers
         [HttpPost]
         public async Task<ActionResult<AccountDto>> AddAccount([FromBody] AddAccountRequestDto request)
         {
+            var userId = _authService.GetCurrentUserId(User);
+
             var account = new Account
             {
                 AccountNumber = request.AccountNumber,
                 Balance = request.Balance,
                 AccountType = request.AccountType,
-                CreatedDate = request.CreatedDate
+                CreatedDate = request.CreatedDate,
+                UserId = userId // Assign to current user
             };
 
             var created = await _accountRepository.CreateAsync(account);
@@ -148,6 +168,12 @@ namespace SecureBank.API.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<AccountDto>> UpdateAccount(int id, [FromBody] AddAccountRequestDto request)
         {
+            // Check if user can access this account
+            if (!await _authService.CanAccessAccountAsync(User, id))
+            {
+                return Forbid();
+            }
+
             var account = new Account
             {
                 AccountNumber = request.AccountNumber,
@@ -177,6 +203,12 @@ namespace SecureBank.API.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteAccount(int id)
         {
+            // Check if user can access this account
+            if (!await _authService.CanAccessAccountAsync(User, id))
+            {
+                return Forbid();
+            }
+
             var deleted = await _accountRepository.DeleteAsync(id);
             if (deleted == null)
                 return NotFound();

@@ -430,6 +430,37 @@
   },
   {
     "ContainingType": "SecureBank.API.Controllers.CreditCardsController",
+    "Method": "UpdateCreditCard",
+    "RelativePath": "api/CreditCards/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "SecureBank.API.Models.DTO.AddCreditRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SecureBank.API.Models.DTO.CreditCardDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SecureBank.API.Controllers.CreditCardsController",
     "Method": "DeleteCreditCard",
     "RelativePath": "api/CreditCards/{id}",
     "HttpMethod": "DELETE",
@@ -862,6 +893,58 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SecureBank.API.Controllers.UsersController",
+    "Method": "Register",
+    "RelativePath": "api/Users/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "SecureBank.API.Models.DTO.UserRegisterRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SecureBank.API.Models.DTO.UserRegisterResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SecureBank.API.Controllers.UsersController",
+    "Method": "Login",
+    "RelativePath": "api/Users/UserLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDetails",
+        "Type": "SecureBank.API.Models.DTO.UserLoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SecureBank.API.Models.DTO.UserLoginResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "SecureBank.API.Controllers.WeatherForecastController",

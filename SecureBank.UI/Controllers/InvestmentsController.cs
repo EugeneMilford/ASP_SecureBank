@@ -4,6 +4,7 @@ using SecureBank.UI.Models;
 using SecureBank.UI.Models.DTO;
 using System.Text;
 using System.Text.Json;
+using System.Net.Http.Headers;
 
 namespace SecureBank.UI.Controllers
 {
@@ -23,7 +24,23 @@ namespace SecureBank.UI.Controllers
             try
             {
                 var client = _httpClientFactory.CreateClient();
+
+                // Attach JWT token
+                var token = HttpContext.Session.GetString("JWTToken");
+                if (!string.IsNullOrEmpty(token))
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                }
+
                 var response = await client.GetAsync("https://localhost:7251/api/investments");
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
                 response.EnsureSuccessStatusCode();
 
                 var responseBody = await response.Content.ReadAsStringAsync();
@@ -34,7 +51,7 @@ namespace SecureBank.UI.Controllers
             }
             catch (Exception ex)
             {
-                // Handle error (log, show error view, etc.)
+                TempData["Error"] = "Unable to load investments.";
             }
             return View(investments);
         }
@@ -43,69 +60,140 @@ namespace SecureBank.UI.Controllers
         [HttpGet]
         public async Task<IActionResult> Add()
         {
-            var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("https://localhost:7251/api/Accounts");
-            response.EnsureSuccessStatusCode();
-
-            var accounts = await response.Content.ReadFromJsonAsync<List<AccountDto>>();
-
-            ViewBag.Accounts = accounts
-                .Select(a => new SelectListItem
-                {
-                    Value = a.AccountId.ToString(),
-                    Text = a.AccountNumber
-                }).ToList();
-
-            // Add investment types dropdown
-            ViewBag.InvestmentTypes = new List<SelectListItem>
+            try
             {
-                new SelectListItem { Value = "Stocks", Text = "Stocks" },
-                new SelectListItem { Value = "Bonds", Text = "Bonds" },
-                new SelectListItem { Value = "Mutual Funds", Text = "Mutual Funds" },
-                new SelectListItem { Value = "ETFs", Text = "ETFs" },
-                new SelectListItem { Value = "Fixed Deposit", Text = "Fixed Deposit" },
-                new SelectListItem { Value = "Real Estate", Text = "Real Estate" }
-            };
+                var client = _httpClientFactory.CreateClient();
 
-            return View();
+                // Attach JWT token
+                var token = HttpContext.Session.GetString("JWTToken");
+
+                if (string.IsNullOrEmpty(token))
+                {
+                    TempData["Error"] = "Please log in to continue.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                var response = await client.GetAsync("https://localhost:7251/api/Accounts");
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    TempData["Error"] = $"Unable to load accounts. Status: {response.StatusCode}";
+                    return RedirectToAction("Index");
+                }
+
+                var accounts = await response.Content.ReadFromJsonAsync<List<AccountDto>>();
+
+                if (accounts == null || !accounts.Any())
+                {
+                    TempData["Error"] = "No accounts available. Please create an account first.";
+                    return RedirectToAction("Index", "Accounts");
+                }
+
+                ViewBag.Accounts = accounts
+                    .Select(a => new SelectListItem
+                    {
+                        Value = a.AccountId.ToString(),
+                        Text = a.AccountNumber
+                    }).ToList();
+
+                // Add investment types dropdown
+                ViewBag.InvestmentTypes = new List<SelectListItem>
+                {
+                    new SelectListItem { Value = "Stocks", Text = "Stocks" },
+                    new SelectListItem { Value = "Bonds", Text = "Bonds" },
+                    new SelectListItem { Value = "Mutual Funds", Text = "Mutual Funds" },
+                    new SelectListItem { Value = "ETFs", Text = "ETFs" },
+                    new SelectListItem { Value = "Fixed Deposit", Text = "Fixed Deposit" },
+                    new SelectListItem { Value = "Real Estate", Text = "Real Estate" }
+                };
+
+                return View();
+            }
+            catch (HttpRequestException ex)
+            {
+                TempData["Error"] = $"Connection error: {ex.Message}";
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = $"Unable to load form: {ex.Message}";
+                return RedirectToAction("Index");
+            }
         }
 
         // Add a new investment
         [HttpPost]
         public async Task<IActionResult> Add(AddInvestmentViewModel model)
         {
-            var client = _httpClientFactory.CreateClient();
-
-            var httpRequestMessage = new HttpRequestMessage()
+            try
             {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri("https://localhost:7251/api/Investments"),
-                Content = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8, "application/json")
-            };
+                var client = _httpClientFactory.CreateClient();
 
-            var httpResponseMessage = await client.SendAsync(httpRequestMessage);
+                // Attach JWT token
+                var token = HttpContext.Session.GetString("JWTToken");
+                if (!string.IsNullOrEmpty(token))
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                }
 
-            if (!httpResponseMessage.IsSuccessStatusCode)
-            {
-                var errorContent = await httpResponseMessage.Content.ReadAsStringAsync();
+                var httpRequestMessage = new HttpRequestMessage()
+                {
+                    Method = HttpMethod.Post,
+                    RequestUri = new Uri("https://localhost:7251/api/Investments"),
+                    Content = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8, "application/json")
+                };
 
-                // Repopulate dropdowns on error
-                await PopulateDropdowns(client);
+                var httpResponseMessage = await client.SendAsync(httpRequestMessage);
 
-                ModelState.AddModelError(string.Empty, $"API Error: {errorContent}");
+                if (httpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
+                if (!httpResponseMessage.IsSuccessStatusCode)
+                {
+                    var errorContent = await httpResponseMessage.Content.ReadAsStringAsync();
+
+                    // Repopulate dropdowns on error
+                    try
+                    {
+                        await PopulateDropdowns(client);
+                    }
+                    catch
+                    {
+                        ViewBag.Accounts = new List<SelectListItem>();
+                        ViewBag.InvestmentTypes = new List<SelectListItem>();
+                    }
+
+                    ModelState.AddModelError(string.Empty, $"API Error: {errorContent}");
+                    return View(model);
+                }
+
+                var response = await httpResponseMessage.Content.ReadFromJsonAsync<InvestmentDto>();
+                if (response is not null)
+                {
+                    TempData["Success"] = "Investment created successfully!";
+                    return RedirectToAction("Index", "Investments");
+                }
+
                 return View(model);
             }
-
-            var response = await httpResponseMessage.Content.ReadFromJsonAsync<InvestmentDto>();
-            if (response is not null)
+            catch (Exception ex)
             {
-                return RedirectToAction("Index", "Investments");
+                TempData["Error"] = $"An error occurred: {ex.Message}";
+                return RedirectToAction("Index");
             }
-
-            // Repopulate dropdowns if needed
-            await PopulateDropdowns(client);
-
-            return View(model);
         }
 
         // Investment Details Method
@@ -116,15 +204,29 @@ namespace SecureBank.UI.Controllers
             {
                 var client = _httpClientFactory.CreateClient();
 
+                // Attach JWT token
+                var token = HttpContext.Session.GetString("JWTToken");
+                if (!string.IsNullOrEmpty(token))
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                }
+
                 // Get investment details
                 var response = await client.GetAsync($"https://localhost:7251/api/investments/{id}");
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
                 response.EnsureSuccessStatusCode();
                 var investment = await response.Content.ReadFromJsonAsync<InvestmentDto>();
 
                 // If AccountNumber is missing, try to get it from the account using AccountId
                 if (investment != null && string.IsNullOrEmpty(investment.AccountNumber))
                 {
-                    // First try using AccountId if available
                     if (investment.AccountId > 0)
                     {
                         try
@@ -163,20 +265,127 @@ namespace SecureBank.UI.Controllers
             }
             catch (Exception ex)
             {
-                // Handle error
-                return View("Error");
+                TempData["Error"] = "Unable to load investment details.";
+                return RedirectToAction("Index");
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
+            try
+            {
+                var investment = await client.GetFromJsonAsync<InvestmentDto>($"https://localhost:7251/api/investments/{id}");
+
+                if (investment is not null)
+                {
+                    // Populate dropdowns
+                    await PopulateDropdowns(client);
+                    return View(investment);
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                if (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+            }
+
+            TempData["Error"] = "Investment not found.";
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(InvestmentDto request)
+        {
+            var client = _httpClientFactory.CreateClient();
+
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
+            var investmentUpdateRequest = new HttpRequestMessage()
+            {
+                Method = HttpMethod.Put,
+                RequestUri = new Uri($"https://localhost:7251/api/investments/{request.InvestmentId}"),
+                Content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json")
+            };
+
+            var investmentUpdateResponse = await client.SendAsync(investmentUpdateRequest);
+
+            if (investmentUpdateResponse.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                HttpContext.Session.Clear();
+                TempData["Error"] = "Session expired. Please log in again.";
+                return RedirectToAction("Login", "AuthUser");
+            }
+
+            if (!investmentUpdateResponse.IsSuccessStatusCode)
+            {
+                var errorContent = await investmentUpdateResponse.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Failed to update investment: {errorContent}");
+                return View(request);
+            }
+
+            var updatedInvestment = await investmentUpdateResponse.Content.ReadFromJsonAsync<InvestmentDto>();
+            if (updatedInvestment is not null)
+            {
+                TempData["Success"] = "Investment updated successfully!";
+                return RedirectToAction("Index", "Investments");
+            }
+
+            ModelState.AddModelError("", "Unknown error updating investment.");
+            return View(request);
         }
 
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync($"https://localhost:7251/api/investments/{id}");
-            response.EnsureSuccessStatusCode();
-            var investment = await response.Content.ReadFromJsonAsync<InvestmentDto>();
 
-            return View(investment); // Show confirmation view
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
+            try
+            {
+                var response = await client.GetAsync($"https://localhost:7251/api/investments/{id}");
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
+                response.EnsureSuccessStatusCode();
+                var investment = await response.Content.ReadFromJsonAsync<InvestmentDto>();
+
+                return View(investment);
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Unable to load investment.";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost, ActionName("Delete")]
@@ -184,8 +393,23 @@ namespace SecureBank.UI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
 
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
             // Get the investment info
             var response = await client.GetAsync($"https://localhost:7251/api/investments/{id}");
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                HttpContext.Session.Clear();
+                TempData["Error"] = "Session expired. Please log in again.";
+                return RedirectToAction("Login", "AuthUser");
+            }
+
             response.EnsureSuccessStatusCode();
             var investment = await response.Content.ReadFromJsonAsync<InvestmentDto>();
 
@@ -213,9 +437,8 @@ namespace SecureBank.UI.Controllers
                     var accountUpdateResponse = await client.SendAsync(accountUpdateRequest);
                     if (!accountUpdateResponse.IsSuccessStatusCode)
                     {
-                        // Handle error - maybe add model state error or log
                         var errorContent = await accountUpdateResponse.Content.ReadAsStringAsync();
-                        // You might want to return an error view here instead of continuing
+                        TempData["Warning"] = "Investment deleted but failed to update account balance.";
                     }
                 }
             }
@@ -224,6 +447,7 @@ namespace SecureBank.UI.Controllers
             var deleteResponse = await client.DeleteAsync($"https://localhost:7251/api/investments/{id}");
             deleteResponse.EnsureSuccessStatusCode();
 
+            TempData["Success"] = "Investment deleted successfully!";
             return RedirectToAction("Index");
         }
 

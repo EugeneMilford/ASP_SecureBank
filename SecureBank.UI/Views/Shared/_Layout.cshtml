@@ -10,13 +10,25 @@
     <link rel="stylesheet" href="~/css/Bank.css" asp-append-version="true" />
 </head>
 <body>
+
+    Here's your updated navbar with conditional display for logged-in users:
+
+    Updated Navbar with User Info
+    Interactive artifact
+    If you want an even more feature-rich version with a dropdown menu for the user, here's an enhanced version:
+
+    Enhanced Navbar with User Dropdown
+    Interactive artifact
+    Two Options Provided:
+
+
+
+
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container position-relative d-flex align-items-center justify-content-between">
-
-            <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
+            <a href="@Url.Action("Index", "Welcome")" class="logo d-flex align-items-center me-auto me-xl-0">
                 <h1 class="sitename">Secure Bank</h1>
             </a>
-
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
@@ -26,10 +38,31 @@
                     <li><a asp-area="" asp-controller="Loans" asp-action="Index" class="nav-link">Loans</a></li>
                     <li><a asp-area="" asp-controller="CreditCards" asp-action="Index" class="nav-link">Credit Cards</a></li>
                     <li><a asp-area="" asp-controller="Investments" asp-action="Index" class="nav-link">Investments</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Contacts" asp-action="Add" class="nav-link">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
+
+            @if (!string.IsNullOrEmpty(Context.Session.GetString("Username")))
+            {
+                <!-- Logged In User -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="user-info d-flex align-items-center">
+                        <i class="bi bi-person-circle me-2" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                        <span class="username" style="font-weight: 600; color: var(--default-color);">
+                            @Context.Session.GetString("Username")
+                        </span>
+                    </div>
+                    <a class="cta-btn cta-btn-logout" asp-controller="AuthUser" asp-action="Logout">
+                        <i class="bi bi-box-arrow-right me-1"></i>Logout
+                    </a>
+                </div>
+            }
+            else
+            {
+                <!-- Not Logged In -->
+                <a class="cta-btn" asp-controller="AuthUser" asp-action="Login">Login</a>
+            }
         </div>
     </header>
 

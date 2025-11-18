@@ -46,6 +46,22 @@ namespace SecureBank.API.Data
                 .HasMany(u => u.Accounts)
                 .WithOne(a => a.User)
                 .HasForeignKey(a => a.UserId);
+
+            // Seeding Admin User
+            modelBuilder.Entity<User>().HasData(
+                new User
+                {
+                    UserId = 1,
+                    FirstName = "Admin",
+                    LastName = "User",
+                    Email = "admin@securebank.com",
+                    Username = "admin",
+                    Password = "Admin123!",
+                    PhoneNumber = "+1234567890",
+                    CreatedDate = DateTime.UtcNow,
+                    Role = "Admin"
+                }
+            );
         }
     }
 }

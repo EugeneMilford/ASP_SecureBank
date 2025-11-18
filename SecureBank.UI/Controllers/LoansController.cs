@@ -4,6 +4,7 @@ using SecureBank.UI.Models;
 using SecureBank.UI.Models.DTO;
 using System.Text;
 using System.Text.Json;
+using System.Net.Http.Headers;
 
 namespace SecureBank.UI.Controllers
 {
@@ -23,7 +24,23 @@ namespace SecureBank.UI.Controllers
             try
             {
                 var client = _httpClientFactory.CreateClient();
+
+                // Attach JWT token
+                var token = HttpContext.Session.GetString("JWTToken");
+                if (!string.IsNullOrEmpty(token))
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                }
+
                 var response = await client.GetAsync("https://localhost:7251/api/loans");
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
                 response.EnsureSuccessStatusCode();
 
                 var responseBody = await response.Content.ReadAsStringAsync();
@@ -34,7 +51,7 @@ namespace SecureBank.UI.Controllers
             }
             catch (Exception ex)
             {
-                // Handle error (log, show error view, etc.)
+                TempData["Error"] = "Unable to load loans.";
             }
             return View(loans);
         }
@@ -43,45 +60,44 @@ namespace SecureBank.UI.Controllers
         [HttpGet]
         public async Task<IActionResult> Add()
         {
-            var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("https://localhost:7251/api/Accounts");
-            response.EnsureSuccessStatusCode();
+            try
+            {
+                var client = _httpClientFactory.CreateClient();
 
-            var accounts = await response.Content.ReadFromJsonAsync<List<AccountDto>>();
+                // Attach JWT token
+                var token = HttpContext.Session.GetString("JWTToken");
 
-            ViewBag.Accounts = accounts
-                .Select(a => new SelectListItem
+                if (string.IsNullOrEmpty(token))
                 {
-                    Value = a.AccountId.ToString(),
-                    Text = a.AccountNumber
-                }).ToList();
+                    TempData["Error"] = "Please log in to continue.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
 
-            return View();
-        }
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-        // Add a new loan
-        [HttpPost]
-        public async Task<IActionResult> Add(AddLoanViewModel model)
-        {
-            var client = _httpClientFactory.CreateClient();
+                var response = await client.GetAsync("https://localhost:7251/api/Accounts");
 
-            var httpRequestMessage = new HttpRequestMessage()
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri("https://localhost:7251/api/Loans"),
-                Content = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8, "application/json")
-            };
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
 
-            var httpResponseMessage = await client.SendAsync(httpRequestMessage);
+                if (!response.IsSuccessStatusCode)
+                {
+                    TempData["Error"] = $"Unable to load accounts. Status: {response.StatusCode}";
+                    return RedirectToAction("Index");
+                }
 
-            if (!httpResponseMessage.IsSuccessStatusCode)
-            {
-                var errorContent = await httpResponseMessage.Content.ReadAsStringAsync();
+                var accounts = await response.Content.ReadFromJsonAsync<List<AccountDto>>();
 
-                // Repopulate dropdown on error
-                var accountsResponse = await client.GetAsync("https://localhost:7251/api/Accounts");
-                accountsResponse.EnsureSuccessStatusCode();
-                var accounts = await accountsResponse.Content.ReadFromJsonAsync<List<AccountDto>>();
+                if (accounts == null || !accounts.Any())
+                {
+                    TempData["Error"] = "No accounts available. Please create an account first.";
+                    return RedirectToAction("Index", "Accounts");
+                }
+
                 ViewBag.Accounts = accounts
                     .Select(a => new SelectListItem
                     {
@@ -89,28 +105,94 @@ namespace SecureBank.UI.Controllers
                         Text = a.AccountNumber
                     }).ToList();
 
-                ModelState.AddModelError(string.Empty, $"API Error: {errorContent}");
+                return View();
+            }
+            catch (HttpRequestException ex)
+            {
+                TempData["Error"] = $"Connection error: {ex.Message}";
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = $"Unable to load accounts: {ex.Message}";
+                return RedirectToAction("Index");
+            }
+        }
+
+        // Add a new loan
+        [HttpPost]
+        public async Task<IActionResult> Add(AddLoanViewModel model)
+        {
+            try
+            {
+                var client = _httpClientFactory.CreateClient();
+
+                // Attach JWT token
+                var token = HttpContext.Session.GetString("JWTToken");
+                if (!string.IsNullOrEmpty(token))
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                }
+
+                var httpRequestMessage = new HttpRequestMessage()
+                {
+                    Method = HttpMethod.Post,
+                    RequestUri = new Uri("https://localhost:7251/api/Loans"),
+                    Content = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8, "application/json")
+                };
+
+                var httpResponseMessage = await client.SendAsync(httpRequestMessage);
+
+                if (httpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
+                if (!httpResponseMessage.IsSuccessStatusCode)
+                {
+                    var errorContent = await httpResponseMessage.Content.ReadAsStringAsync();
+
+                    // Repopulate dropdown on error
+                    try
+                    {
+                        var accountsResponse = await client.GetAsync("https://localhost:7251/api/Accounts");
+                        if (accountsResponse.IsSuccessStatusCode)
+                        {
+                            var accounts = await accountsResponse.Content.ReadFromJsonAsync<List<AccountDto>>();
+                            ViewBag.Accounts = accounts
+                                .Select(a => new SelectListItem
+                                {
+                                    Value = a.AccountId.ToString(),
+                                    Text = a.AccountNumber
+                                }).ToList();
+                        }
+                    }
+                    catch
+                    {
+                        // If can't load accounts, just show error
+                        ViewBag.Accounts = new List<SelectListItem>();
+                    }
+
+                    ModelState.AddModelError(string.Empty, $"API Error: {errorContent}");
+                    return View(model);
+                }
+
+                var response = await httpResponseMessage.Content.ReadFromJsonAsync<LoanDto>();
+                if (response is not null)
+                {
+                    TempData["Success"] = "Loan created successfully!";
+                    return RedirectToAction("Index", "Loans");
+                }
+
                 return View(model);
             }
-
-            var response = await httpResponseMessage.Content.ReadFromJsonAsync<LoanDto>();
-            if (response is not null)
+            catch (Exception ex)
             {
-                return RedirectToAction("Index", "Loans");
+                TempData["Error"] = $"An error occurred: {ex.Message}";
+                return RedirectToAction("Index");
             }
-
-            // Repopulate accounts if needed
-            var accountsResponse2 = await client.GetAsync("https://localhost:7251/api/Accounts");
-            accountsResponse2.EnsureSuccessStatusCode();
-            var accounts2 = await accountsResponse2.Content.ReadFromJsonAsync<List<AccountDto>>();
-            ViewBag.Accounts = accounts2
-                .Select(a => new SelectListItem
-                {
-                    Value = a.AccountId.ToString(),
-                    Text = a.AccountNumber
-                }).ToList();
-
-            return View(model);
         }
 
         // Fixed Loans Controller Details Method (improved version)
@@ -121,8 +203,23 @@ namespace SecureBank.UI.Controllers
             {
                 var client = _httpClientFactory.CreateClient();
 
+                // Attach JWT token
+                var token = HttpContext.Session.GetString("JWTToken");
+                if (!string.IsNullOrEmpty(token))
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                }
+
                 // Get loan details
                 var response = await client.GetAsync($"https://localhost:7251/api/loans/{id}");
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
                 response.EnsureSuccessStatusCode();
                 var loan = await response.Content.ReadFromJsonAsync<LoanDto>();
 
@@ -168,20 +265,138 @@ namespace SecureBank.UI.Controllers
             }
             catch (Exception ex)
             {
-                // Handle error
-                return View("Error");
+                TempData["Error"] = "Unable to load loan details.";
+                return RedirectToAction("Index");
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
+            try
+            {
+                var loan = await client.GetFromJsonAsync<LoanDto>($"https://localhost:7251/api/loans/{id}");
+
+                if (loan is not null)
+                {
+                    // Get accounts for dropdown
+                    var accountsResponse = await client.GetAsync("https://localhost:7251/api/Accounts");
+                    if (accountsResponse.IsSuccessStatusCode)
+                    {
+                        var accounts = await accountsResponse.Content.ReadFromJsonAsync<List<AccountDto>>();
+                        ViewBag.Accounts = accounts
+                            .Select(a => new SelectListItem
+                            {
+                                Value = a.AccountId.ToString(),
+                                Text = a.AccountNumber
+                            }).ToList();
+                    }
+
+                    return View(loan);
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                if (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+            }
+
+            TempData["Error"] = "Loan not found.";
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(LoanDto request)
+        {
+            var client = _httpClientFactory.CreateClient();
+
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
+            var loanUpdateRequest = new HttpRequestMessage()
+            {
+                Method = HttpMethod.Put,
+                RequestUri = new Uri($"https://localhost:7251/api/loans/{request.LoanId}"),
+                Content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json")
+            };
+
+            var loanUpdateResponse = await client.SendAsync(loanUpdateRequest);
+
+            if (loanUpdateResponse.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                HttpContext.Session.Clear();
+                TempData["Error"] = "Session expired. Please log in again.";
+                return RedirectToAction("Login", "AuthUser");
+            }
+
+            if (!loanUpdateResponse.IsSuccessStatusCode)
+            {
+                var errorContent = await loanUpdateResponse.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Failed to update loan: {errorContent}");
+                return View(request);
+            }
+
+            var updatedLoan = await loanUpdateResponse.Content.ReadFromJsonAsync<LoanDto>();
+            if (updatedLoan is not null)
+            {
+                TempData["Success"] = "Loan updated successfully!";
+                return RedirectToAction("Index", "Loans");
+            }
+
+            ModelState.AddModelError("", "Unknown error updating loan.");
+            return View(request);
         }
 
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync($"https://localhost:7251/api/loans/{id}");
-            response.EnsureSuccessStatusCode();
-            var loan = await response.Content.ReadFromJsonAsync<LoanDto>();
 
-            return View(loan); // Show confirmation view
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
+            try
+            {
+                var response = await client.GetAsync($"https://localhost:7251/api/loans/{id}");
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
+                response.EnsureSuccessStatusCode();
+                var loan = await response.Content.ReadFromJsonAsync<LoanDto>();
+
+                return View(loan);
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Unable to load loan.";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost, ActionName("Delete")]
@@ -189,15 +404,29 @@ namespace SecureBank.UI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
 
+            // Attach JWT token
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
             // Get the loan info
             var response = await client.GetAsync($"https://localhost:7251/api/loans/{id}");
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                HttpContext.Session.Clear();
+                TempData["Error"] = "Session expired. Please log in again.";
+                return RedirectToAction("Login", "AuthUser");
+            }
+
             response.EnsureSuccessStatusCode();
             var loan = await response.Content.ReadFromJsonAsync<LoanDto>();
 
             if (loan != null)
             {
-                // Get the account using AccountId (assuming LoanDto has AccountId property)
-                // If LoanDto doesn't have AccountId, you'll need to add it to match the pattern
+                // Get the account using AccountId
                 var account = await client.GetFromJsonAsync<AccountDto>(
                     $"https://localhost:7251/api/accounts/{loan.AccountId}"
                 );
@@ -219,9 +448,8 @@ namespace SecureBank.UI.Controllers
                     var accountUpdateResponse = await client.SendAsync(accountUpdateRequest);
                     if (!accountUpdateResponse.IsSuccessStatusCode)
                     {
-                        // Handle error - maybe add model state error or log
                         var errorContent = await accountUpdateResponse.Content.ReadAsStringAsync();
-                        // You might want to return an error view here instead of continuing
+                        TempData["Warning"] = "Loan deleted but failed to update account balance.";
                     }
                 }
             }
@@ -230,6 +458,7 @@ namespace SecureBank.UI.Controllers
             var deleteResponse = await client.DeleteAsync($"https://localhost:7251/api/loans/{id}");
             deleteResponse.EnsureSuccessStatusCode();
 
+            TempData["Success"] = "Loan deleted successfully!";
             return RedirectToAction("Index");
         }
     }

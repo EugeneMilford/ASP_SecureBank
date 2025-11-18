@@ -67,5 +67,29 @@ namespace SecureBank.API.Repositories.Implementation
         {
             return await _context.accounts.FirstOrDefaultAsync(a => a.AccountNumber == accountNumber);
         }
+
+        public async Task<List<Account>> GetAccountsByUserIdAsync(int userId)
+        {
+            return await _context.accounts
+                .Where(a => a.UserId == userId)
+                .Include(a => a.BillPayments)
+                .Include(a => a.Loans)
+                .Include(a => a.CreditCards)
+                .Include(a => a.Investments)
+                .Include(a => a.Transfers)
+                .ToListAsync();
+        }
+
+        public async Task<Account?> GetByIdWithOwnerAsync(int id)
+        {
+            return await _context.accounts
+                .Include(a => a.User)
+                .Include(a => a.BillPayments)
+                .Include(a => a.Loans)
+                .Include(a => a.CreditCards)
+                .Include(a => a.Investments)
+                .Include(a => a.Transfers)
+                .FirstOrDefaultAsync(a => a.AccountId == id);
+        }
     }
 }

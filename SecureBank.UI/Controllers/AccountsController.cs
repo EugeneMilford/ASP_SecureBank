@@ -3,6 +3,7 @@ using SecureBank.UI.Models;
 using SecureBank.UI.Models.DTO;
 using System.Text;
 using System.Text.Json;
+using System.Net.Http.Headers;
 
 namespace SecureBank.UI.Controllers
 {
@@ -22,27 +23,35 @@ namespace SecureBank.UI.Controllers
             try
             {
                 var client = _httpClientFactory.CreateClient();
+
+                // Manually attach JWT token from session
+                var token = HttpContext.Session.GetString("JWTToken");
+                if (!string.IsNullOrEmpty(token))
+                {
+                    client.DefaultRequestHeaders.Authorization =
+                        new AuthenticationHeaderValue("Bearer", token);
+                }
+
                 var httpResponseMessage = await client.GetAsync("https://localhost:7251/api/accounts");
+
+                if (httpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+
                 httpResponseMessage.EnsureSuccessStatusCode();
                 var stringResponseBody = await httpResponseMessage.Content.ReadAsStringAsync();
-
-                // Debugging
-                System.Diagnostics.Debug.WriteLine($"API Response: {stringResponseBody}");
 
                 accounts = JsonSerializer.Deserialize<List<AccountDetailsDto>>(stringResponseBody, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 }) ?? new List<AccountDetailsDto>();
-
-                // Debugging
-                foreach (var account in accounts)
-                {
-                    System.Diagnostics.Debug.WriteLine($"Account {account.AccountNumber} has {account.Bills.Count} bills");
-                }
             }
             catch (Exception ex)
             {
-                // handle error, log, etc.
+                TempData["Error"] = "Unable to load accounts.";
             }
             return View(accounts);
         }
@@ -58,6 +67,14 @@ namespace SecureBank.UI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
 
+            // Manually attach JWT token from session
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer", token);
+            }
+
             var httpRequestMessage = new HttpRequestMessage()
             {
                 Method = HttpMethod.Post,
@@ -67,12 +84,25 @@ namespace SecureBank.UI.Controllers
 
             var httpResponseMessage = await client.SendAsync(httpRequestMessage);
 
-            httpResponseMessage.EnsureSuccessStatusCode();
+            if (httpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                HttpContext.Session.Clear();
+                TempData["Error"] = "Session expired. Please log in again.";
+                return RedirectToAction("Login", "AuthUser");
+            }
+
+            if (!httpResponseMessage.IsSuccessStatusCode)
+            {
+                var errorContent = await httpResponseMessage.Content.ReadAsStringAsync();
+                TempData["Error"] = $"Failed to create account: {errorContent}";
+                return View(model);
+            }
 
             var response = await httpResponseMessage.Content.ReadFromJsonAsync<AccountDto>();
 
             if (response is not null)
             {
+                TempData["Success"] = "Account created successfully!";
                 return RedirectToAction("Index", "Accounts");
             }
 
@@ -84,20 +114,54 @@ namespace SecureBank.UI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
 
-            var response = await client.GetFromJsonAsync<AccountDto>($"https://localhost:7251/api/accounts/{id.ToString()}");
-
-            if (response is not null)
+            // Manually attach JWT token from session
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
             {
-                return View(response);
+                client.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer", token);
             }
 
-            return View(null);
+            try
+            {
+                var response = await client.GetFromJsonAsync<AccountDto>($"https://localhost:7251/api/accounts/{id}");
+
+                if (response is not null)
+                {
+                    return View(response);
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                if (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    HttpContext.Session.Clear();
+                    TempData["Error"] = "Session expired. Please log in again.";
+                    return RedirectToAction("Login", "AuthUser");
+                }
+                else if (ex.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                {
+                    TempData["Error"] = "You don't have permission to edit this account.";
+                    return RedirectToAction("Index", "Accounts");
+                }
+            }
+
+            TempData["Error"] = "Account not found.";
+            return RedirectToAction("Index", "Accounts");
         }
 
         [HttpPost]
         public async Task<IActionResult> Edit(AccountDto request)
         {
             var client = _httpClientFactory.CreateClient();
+
+            // Manually attach JWT token from session
+            var token = HttpContext.Session.GetString("JWTToken");
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer", token);
+            }
 
             var httpRequestMessage = new HttpRequestMessage()
             {
@@ -107,17 +171,36 @@ namespace SecureBank.UI.Controllers
             };
 
             var httpResponseMessage = await client.SendAsync(httpRequestMessage);
-            httpResponseMessage.EnsureSuccessStatusCode();
+
+            if (httpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                HttpContext.Session.Clear();
+                TempData["Error"] = "Session expired. Please log in again.";
+                return RedirectToAction("Login", "AuthUser");
+            }
+
+            if (httpResponseMessage.StatusCode == System.Net.HttpStatusCode.Forbidden)
+            {
+                TempData["Error"] = "You don't have permission to edit this account.";
+                return RedirectToAction("Index", "Accounts");
+            }
+
+            if (!httpResponseMessage.IsSuccessStatusCode)
+            {
+                var errorContent = await httpResponseMessage.Content.ReadAsStringAsync();
+                TempData["Error"] = $"Failed to update account: {errorContent}";
+                return View(request);
+            }
 
             var response = await httpResponseMessage.Content.ReadFromJsonAsync<AccountDto>();
 
             if (response is not null)
             {
-                return RedirectToAction("Index", "Accounts", new { id = request.AccountId });
+                TempData["Success"] = "Account updated successfully!";
+                return RedirectToAction("Index", "Accounts");
             }
 
             return View();
         }
     }
 }
-
