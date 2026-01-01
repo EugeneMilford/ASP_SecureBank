@@ -147,3 +147,14 @@ D:\Projects\Bank Project\SecureBank\SecureBank.API\obj\Debug\net8.0\SecureBank.A
 D:\Projects\Bank Project\SecureBank\SecureBank.API\obj\Debug\net8.0\SecureBank.API.genruntimeconfig.cache
 D:\Projects\Bank Project\SecureBank\SecureBank.API\obj\Debug\net8.0\ref\SecureBank.API.dll
 D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.Expressions.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\Projects\Bank Project\SecureBank\SecureBank.API\bin\Debug\net8.0\Serilog.Sinks.Seq.dll

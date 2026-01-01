@@ -239,7 +239,7 @@ END";
             {
                 using var ctx = new BankingContext(options);
 
-                // Seed complete user record (avoid null constraint failures)
+                // Seed complete user record 
                 ctx.users.Add(new User
                 {
                     FirstName = "Bob",
@@ -281,7 +281,7 @@ END";
             {
                 using var ctx = new BankingContext(options);
 
-                // Seed complete user record (avoid null constraint failures)
+                // Seed complete user record 
                 ctx.users.Add(new User
                 {
                     FirstName = "Charlie",

@@ -6,6 +6,7 @@ using SecureBank.API.Repositories.Implementation;
 using SecureBank.API.Repositories.Interface;
 using SecureBank.API.Services.Implementation;
 using SecureBank.API.Services.Interface;
+using Serilog;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -78,6 +79,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
           ClockSkew = TimeSpan.Zero
       };
   });
+
+// Adding SeriLog
+builder.Host.UseSerilog((ctx, lc) =>
+    lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
 
 var app = builder.Build();
 
